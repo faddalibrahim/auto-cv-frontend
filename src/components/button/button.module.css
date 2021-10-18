@@ -1,0 +1,14 @@
+.styles {
+  background-color: var(--app-theme);
+  padding: 0.5rem;
+  color: white;
+  width: 100%;
+  font-family: "Google Sans";
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 0.7rem 0;
+}
+
+.styles:hover {
+  background-color: var(--app-theme-deep);
+}

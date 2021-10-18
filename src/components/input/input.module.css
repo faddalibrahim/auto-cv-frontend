@@ -1,0 +1,13 @@
+.styles {
+  padding: 0.7rem 1rem;
+  border: 0.09rem solid var(--input-border-color);
+  font-family: "Google Sans";
+  border-radius: 5px;
+  width: 100%;
+  margin: 0.7rem 0;
+  transition: border 0.1s linear;
+}
+
+.styles:focus {
+  border: 0.1rem solid var(--app-theme);
+}
