@@ -1,5 +1,4 @@
 //libraries
-import { NavLink } from "react-router-dom";
 
 //components
 import Button from "components/button/Button";
