@@ -15,7 +15,7 @@ import Error404 from "pages/errors/Error404";
 import Welcome from "./Welcome";
 
 // styles
-import HomeStyles from "./home.module.css";
+import HomeStyles from "./Home.module.scss";
 
 // utils
 import { LOGIN, REGISTER, FORGOT_PASSWORD, RESET_PASSWORD } from "utils/routes";

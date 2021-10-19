@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 //components
 import Button from "components/button/Button";
@@ -6,6 +7,7 @@ import Input from "components/input/Input";
 
 // utils
 import { LOGIN } from "utils/routes";
+import validateFields from "utils/ValidateFields";
 import {
   TEXT,
   PASSWORD,
@@ -16,23 +18,69 @@ import {
 } from "utils/FormConstants";
 
 const Register = () => {
+  const [fields, setField] = useState({
+    [FIRST_NAME]: "",
+    [LAST_NAME]: "",
+    [EMAIL]: "",
+    [PASSWORD]: "",
+    [REPEAT_PASSWORD]: "",
+  });
+
+  const handleRegisteration = (e) => {
+    e.preventDefault();
+    const { ok, message } = validateFields([fields, true, true]);
+    if (!ok) {
+      alert(message);
+      return;
+    }
+    console.log(fields);
+  };
+
+  const handleChange = (e) => {
+    const updatedFieldKey = e.target.id;
+    const updatedField = { [updatedFieldKey]: e.target.value };
+    setField({ ...fields, ...updatedField });
+  };
   return (
     <div>
       <div>
-        <h1 style={{ color: "#aaa" }}>Register</h1>
-        <form action="">
-          <Input type={TEXT} placeholder={FIRST_NAME} />
-          <Input type={TEXT} placeholder={LAST_NAME} />
-          <Input type={EMAIL} placeholder={EMAIL} />
-          <Input type={PASSWORD} placeholder={PASSWORD} />
-          <Input type={PASSWORD} placeholder={REPEAT_PASSWORD} />
+        <h1>Register</h1>
+        <form onSubmit={handleRegisteration}>
+          <Input
+            type={TEXT}
+            placeholder={FIRST_NAME}
+            id={FIRST_NAME}
+            onChange={handleChange}
+          />
+          <Input
+            type={TEXT}
+            placeholder={LAST_NAME}
+            id={LAST_NAME}
+            onChange={handleChange}
+          />
+          <Input
+            type={EMAIL}
+            placeholder={EMAIL}
+            id={EMAIL}
+            onChange={handleChange}
+          />
+          <Input
+            type={PASSWORD}
+            placeholder={PASSWORD}
+            id={PASSWORD}
+            onChange={handleChange}
+          />
+          <Input
+            type={PASSWORD}
+            placeholder={REPEAT_PASSWORD}
+            id={REPEAT_PASSWORD}
+            onChange={handleChange}
+          />
           <Button>register</Button>
         </form>
-        <div style={{ margin: "2rem 0" }}>
-          <span style={{ color: "#aaa" }}>already have an account?</span>{" "}
-          <NavLink to={`${LOGIN}`} style={{ color: "#ef5350" }}>
-            login
-          </NavLink>
+        <div>
+          <span>already have an account?</span>{" "}
+          <NavLink to={`${LOGIN}`}>login</NavLink>
         </div>
       </div>
     </div>
