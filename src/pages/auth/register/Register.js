@@ -52,7 +52,6 @@ const Register = (props) => {
             id={FIRST_NAME}
             onChange={handleChange}
           />
-          <div>{props}</div>
           <Input
             type={TEXT}
             placeholder={LAST_NAME}
