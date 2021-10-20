@@ -1,4 +1,4 @@
-const E404 = () => {
+const Error404Svg = () => {
   return (
     <div>
       <svg
@@ -296,4 +296,4 @@ const E404 = () => {
   );
 };
 
-export default E404;
+export default Error404Svg;
