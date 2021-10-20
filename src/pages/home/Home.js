@@ -11,7 +11,7 @@ import Login from "pages/auth/login/Login";
 import Register from "pages/auth/register/Register";
 import ForgotPassword from "pages/auth/forgot-password/ForgotPassword";
 import ResetPassword from "pages/auth/reset-password/ResetPassword";
-import Error404 from "pages/errors/Error404";
+import Error404 from "pages/errors/Error404/Error404";
 import Welcome from "./Welcome";
 
 // styles

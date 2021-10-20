@@ -1,4 +1,4 @@
-import E404 from "./E404";
+import E404 from "./Error404Svg";
 
 const Error404 = (props) => {
   const page = props.match.url.split("/").pop();

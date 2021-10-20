@@ -1,0 +1,36 @@
+@use 'css/index';
+
+.outerContainer {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.innerContainer {
+  width: 80%;
+
+  span {
+    color: var(--app-theme);
+  }
+}
+
+/* Small (sm) devices (landscape phones, 567px and up) */
+@media screen and (min-width: index.$sm-size) {
+  .innerContainer {
+    width: 40%;
+  }
+}
+
+/* Medium (md) devices (tablets, 768px and up) */
+@media screen and (min-width: index.$md-size) {
+}
+
+/* Large (lg) devices (desktops, 992px and up) */
+@media screen and (min-width: index.$lg-size) {
+}
+
+/* Extra (xl) devices (large desktops, 1200px and up) */
+@media screen and (min-width: index.$xl-size) {
+}

@@ -17,7 +17,7 @@ import {
   REPEAT_PASSWORD,
 } from "utils/FormConstants";
 
-const Register = () => {
+const Register = (props) => {
   const [fields, setField] = useState({
     [FIRST_NAME]: "",
     [LAST_NAME]: "",
@@ -52,6 +52,7 @@ const Register = () => {
             id={FIRST_NAME}
             onChange={handleChange}
           />
+          <div>{props}</div>
           <Input
             type={TEXT}
             placeholder={LAST_NAME}
