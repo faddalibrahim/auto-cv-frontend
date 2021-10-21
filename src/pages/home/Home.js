@@ -13,6 +13,7 @@ import ForgotPassword from "pages/auth/forgot-password/ForgotPassword";
 import ResetPassword from "pages/auth/reset-password/ResetPassword";
 import Error404 from "pages/errors/Error404/Error404";
 import Welcome from "./Welcome";
+import Info from "pages/info/Info";
 
 // styles
 import HomeStyles from "./Home.module.scss";
@@ -28,7 +29,7 @@ const Home = () => {
       <div className={HomeStyles.authRoutesContainer}>
         <Router>
           <Switch>
-            <Route exact path={`${path}`} component={Login} />
+            <Route exact path={`${path}`} component={Info} />
             <Route path={`${path}/${LOGIN}`} component={Login} />
             <Route path={`${path}/${REGISTER}`} component={Register} />
             <Route

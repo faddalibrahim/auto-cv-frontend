@@ -1,6 +1,8 @@
-// import SideBar from "./SideBar";
-import Error404 from "pages/errors/Error404/Error404";
+// libraries
 import { Route, Redirect } from "react-router-dom";
+
+// components
+import Main from "pages/main/Main";
 
 const Protected = (props) => {
   let isAuth = false;
@@ -8,7 +10,7 @@ const Protected = (props) => {
     <Route
       render={(props) =>
         isAuth ? (
-          <Error404 />
+          <Main />
         ) : (
           <Redirect
             to={{

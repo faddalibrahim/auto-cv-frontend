@@ -1,0 +1,19 @@
+.info {
+  display: flex;
+  align-items: center;
+  margin: 0.7rem 0;
+
+  i {
+    color: var(--app-theme);
+    margin-right: 0.4rem;
+  }
+
+  p {
+    color: var(--dark);
+  }
+}
+
+.linkButtons a {
+  margin-right: 1rem;
+  width: 8rem;
+}
