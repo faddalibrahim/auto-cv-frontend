@@ -1,10 +1,11 @@
-import E404 from "./Error404Svg";
+import { withRouter } from "react-router-dom";
+import Error404Svg from "./Error404Svg";
 
 const Error404 = (props) => {
   const page = props.match.url.split("/").pop();
   return (
     <div>
-      <E404 />
+      <Error404Svg />
       opps! we don't have a <span style={{ color: "#ef5350" }}>
         {page}
       </span>{" "}
@@ -13,4 +14,4 @@ const Error404 = (props) => {
   );
 };
 
-export default Error404;
+export default withRouter(Error404);
