@@ -8,6 +8,7 @@ import Error404 from "./pages/errors/Error404/Error404";
 import Protected from "./components/protected/Protected";
 
 // styles
+import AppStyles from "css/app.module.scss";
 
 // utils
 
@@ -18,7 +19,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App">
+      <div className={AppStyles.app}>
         <Router>
           <Switch>
             <Protected exact path="/" />
