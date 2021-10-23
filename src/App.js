@@ -11,6 +11,7 @@ import Protected from "./components/protected/Protected";
 import AppStyles from "css/app.module.scss";
 
 // utils
+import { HOME } from "utils/routes";
 
 class App extends Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class App extends Component {
         <Router>
           <Switch>
             <Protected exact path="/" />
-            <Route path="/home" component={Home} />
+            <Route path={`${HOME}`} component={Home} />
             <Route path="*" component={Error404} />
           </Switch>
         </Router>

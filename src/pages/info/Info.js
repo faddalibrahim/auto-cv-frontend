@@ -15,7 +15,7 @@ const Info = () => {
   return (
     <div>
       {info_page_data.map((data, index) => (
-        <div id={index} className={InfoPageStyles.info}>
+        <div key={index} className={InfoPageStyles.info}>
           <i class={MATERIAL_ICONS}>{CHECK_CIRCLE_OUTLINE}</i>
           <p>{data}</p>
         </div>
