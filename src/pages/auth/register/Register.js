@@ -18,6 +18,8 @@ import {
   REPEAT_PASSWORD,
 } from "utils/FormConstants";
 
+import { HOME, VERIFY_EMAIL } from "utils/routes";
+
 const Register = (props) => {
   const [fields, setField] = useState({
     [FIRST_NAME]: "",
@@ -27,6 +29,10 @@ const Register = (props) => {
     [REPEAT_PASSWORD]: "",
   });
 
+  const sendRegisterationDetails = (fields) => {
+    props.history.push(`${HOME}/${VERIFY_EMAIL}`);
+  };
+
   const handleRegisteration = (e) => {
     e.preventDefault();
     const { ok, message } = validateFields([fields, true, true]);
@@ -34,7 +40,8 @@ const Register = (props) => {
       alert(message);
       return;
     }
-    console.log(fields);
+
+    sendRegisterationDetails(fields);
   };
 
   const handleChange = (e) => {

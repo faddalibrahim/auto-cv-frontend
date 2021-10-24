@@ -14,12 +14,19 @@ import ResetPassword from "pages/auth/reset-password/ResetPassword";
 import Error404 from "pages/errors/Error404/Error404";
 import Welcome from "./Welcome";
 import Info from "pages/info/Info";
+import VerifyEmail from "pages/auth/verify-email/VerifyEmail";
 
 // styles
 import HomeStyles from "./Home.module.scss";
 
 // utils
-import { LOGIN, REGISTER, FORGOT_PASSWORD, RESET_PASSWORD } from "utils/routes";
+import {
+  LOGIN,
+  REGISTER,
+  FORGOT_PASSWORD,
+  RESET_PASSWORD,
+  VERIFY_EMAIL,
+} from "utils/routes";
 
 const Home = () => {
   let { path } = useRouteMatch();
@@ -40,6 +47,7 @@ const Home = () => {
               path={`${path}/${RESET_PASSWORD}`}
               component={ResetPassword}
             />
+            <Route path={`${path}/${VERIFY_EMAIL}`} component={VerifyEmail} />
             <Route path="*" component={Error404} />
           </Switch>
         </Router>
