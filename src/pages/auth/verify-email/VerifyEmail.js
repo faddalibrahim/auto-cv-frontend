@@ -8,7 +8,6 @@ import EmailVerificationProcess from "./EmailVerificationProcess";
 
 const VerifyEmail = ({ location, history }) => {
   const queryString = location.search.slice(1);
-  console.log(queryString);
 
   if (queryString.trim().length) {
     const [auto_cv_token, actual_token] = queryString.split("=");
