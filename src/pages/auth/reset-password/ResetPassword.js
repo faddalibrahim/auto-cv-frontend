@@ -12,7 +12,18 @@ import validateFields from "utils/ValidateFields";
 //styles
 import HomeStyles from "pages/home/Home.module.scss";
 
-const ResetPassword = () => {
+//utils
+
+import { HOME, LOGIN } from "utils/routes";
+
+const ResetPassword = ({ location, history }) => {
+  const queryString = location.search.slice(1);
+  const [auto_cv_token, actual_token] = queryString.split("=");
+
+  if (!queryString.trim().length || !actual_token.trim().length) {
+    history.push(`${HOME}/${LOGIN}`);
+  }
+
   const [fields, setField] = useState({
     [PASSWORD]: "",
     [REPEAT_PASSWORD]: "",
