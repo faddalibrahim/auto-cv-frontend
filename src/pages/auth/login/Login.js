@@ -35,7 +35,7 @@ const Login = () => {
   return (
     <div>
       <h1>Login</h1>
-      <form onSubmit={handleLogin}>
+      <form onSubmit={handleLogin} autoComplete="off">
         <Input
           type={EMAIL}
           placeholder={EMAIL}

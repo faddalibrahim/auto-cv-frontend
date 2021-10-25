@@ -53,7 +53,7 @@ const Register = (props) => {
     <div>
       <div>
         <h1>Register</h1>
-        <form onSubmit={handleRegisteration}>
+        <form onSubmit={handleRegisteration} autoComplete="off">
           <Input
             type={TEXT}
             placeholder={FIRST_NAME}

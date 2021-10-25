@@ -38,7 +38,7 @@ const ForgotPassword = () => {
       <small className={HomeStyles.directive}>
         enter your email to receive a reset link
       </small>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} autoComplete="off">
         <Input
           type={EMAIL}
           placeholder={EMAIL}

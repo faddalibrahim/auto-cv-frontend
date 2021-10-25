@@ -49,7 +49,7 @@ const ResetPassword = ({ location, history }) => {
       <small className={HomeStyles.directive}>
         enter your new password below
       </small>
-      <form onSubmit={handleResetPassword}>
+      <form onSubmit={handleResetPassword} autoComplete="off">
         <Input
           type={PASSWORD}
           placeholder={PASSWORD}
