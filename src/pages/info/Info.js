@@ -4,6 +4,7 @@ import { useRouteMatch, Link } from "react-router-dom";
 // utils
 import { LOGIN, REGISTER } from "utils/routes";
 import Button from "components/button/Button";
+import Icon from "components/icon/Icon";
 import { MATERIAL_ICONS, CHECK_CIRCLE_OUTLINE } from "utils/MaterialIconsData";
 import info_page_data from "./InfoPageData";
 
@@ -16,7 +17,7 @@ const Info = () => {
     <div>
       {info_page_data.map((data, index) => (
         <div key={index} className={InfoPageStyles.info}>
-          <i class={MATERIAL_ICONS}>{CHECK_CIRCLE_OUTLINE}</i>
+          <Icon name={CHECK_CIRCLE_OUTLINE} />
           <p>{data}</p>
         </div>
       ))}
