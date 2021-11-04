@@ -5,7 +5,7 @@ import { useRouteMatch, Link } from "react-router-dom";
 import { LOGIN, REGISTER } from "utils/routes";
 import Button from "components/button/Button";
 import Icon from "components/icon/Icon";
-import { MATERIAL_ICONS, CHECK_CIRCLE_OUTLINE } from "utils/MaterialIconsData";
+import { CHECK_CIRCLE_OUTLINE } from "utils/MaterialIconsData";
 import info_page_data from "./InfoPageData";
 
 // styles

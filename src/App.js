@@ -25,6 +25,7 @@ class App extends Component {
           <Switch>
             <Protected exact path="/" />
             <Route path={`${HOME}`} component={Home} />
+
             <Route path="*" component={Error404} />
           </Switch>
         </Router>

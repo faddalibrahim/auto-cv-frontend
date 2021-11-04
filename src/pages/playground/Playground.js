@@ -1,5 +1,11 @@
+const { default: Skeleton } = require("components/skeleton/Skeleton");
+
 const Playground = () => {
-  return <div>this is a playgound, buddy</div>;
+  return (
+    <div>
+      <Skeleton />
+    </div>
+  );
 };
 
 export default Playground;
