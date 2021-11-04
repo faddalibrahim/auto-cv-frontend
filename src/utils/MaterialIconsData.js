@@ -1,2 +1,9 @@
-export const CHECK_CIRCLE_OUTLINE = "check_circle_outline";
 export const MATERIAL_ICONS = "material-icons";
+export const MATERIAL_ICONS_OUTLINED = "material-icons-outlined";
+export const CHECK_CIRCLE_OUTLINE = "check_circle_outline";
+export const ADD = "add";
+export const NOTIFICATIONS = "notifications";
+export const ARTICLE = "article";
+export const LOGOUT = "logout";
+export const SETTINGS = "settings";
+export const FACE = "face";

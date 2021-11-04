@@ -1,7 +1,9 @@
-import { MATERIAL_ICONS } from "utils/MaterialIconsData";
-
-const Icon = ({ name }) => {
-  return <i className={MATERIAL_ICONS}>{name}</i>;
+const Icon = ({ name, type, className }) => {
+  return (
+    <i id={className} className={`${type} ${className}`}>
+      {name}
+    </i>
+  );
 };
 
 export default Icon;

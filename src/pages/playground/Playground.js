@@ -1,11 +1,7 @@
-const { default: Skeleton } = require("components/skeleton/Skeleton");
+import Sidebar from "components/sidebar/Sidebar";
 
 const Playground = () => {
-  return (
-    <div>
-      <Skeleton />
-    </div>
-  );
+  return <Sidebar />;
 };
 
 export default Playground;
