@@ -15,6 +15,7 @@ import Error404 from "pages/errors/Error404/Error404";
 import Welcome from "./Welcome";
 import Info from "pages/info/Info";
 import VerifyEmail from "pages/auth/verify-email/VerifyEmail";
+import Playground from "pages/playground/Playground";
 
 // styles
 import HomeStyles from "./Home.module.scss";
@@ -26,6 +27,7 @@ import {
   FORGOT_PASSWORD,
   RESET_PASSWORD,
   VERIFY_EMAIL,
+  PLAYGROUND,
 } from "utils/routes";
 
 const Home = () => {
@@ -48,6 +50,7 @@ const Home = () => {
               component={ResetPassword}
             />
             <Route path={`${path}/${VERIFY_EMAIL}`} component={VerifyEmail} />
+            <Route path={`${path}/${PLAYGROUND}`} component={Playground} />
             <Route path="*" component={Error404} />
           </Switch>
         </Router>
