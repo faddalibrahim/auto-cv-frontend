@@ -1,8 +1,19 @@
-const Icon = ({ name, type, className }) => {
+const Icon = ({ name, type, className, text, direction }) => {
   return (
-    <i id={className} className={`${type} ${className}`}>
-      {name}
-    </i>
+    <div
+      className={className}
+      style={{
+        display: "flex",
+        flexFlow: direction,
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <i className={type} style={{ userSelect: "none", padding: "0.5rem" }}>
+        {name}
+      </i>
+      <small>{text}</small>
+    </div>
   );
 };
 

@@ -16,22 +16,50 @@ import {
 const Sidebar = () => {
   return (
     <div className={SidebarStyles.sidebar}>
-      <div>
-        <Icon type={MATERIAL_ICONS} name={FACE} />
-      </div>
+      <Icon
+        className={SidebarStyles.icon}
+        type={MATERIAL_ICONS}
+        name={FACE}
+        text="profile"
+        direction="row"
+      />
       <div>
         <Icon
+          className={SidebarStyles.icon}
           type={MATERIAL_ICONS}
           name={ADD}
-          className={SidebarStyles.active}
+          text="new"
+          direction="row"
         />
-        <Icon type={MATERIAL_ICONS_OUTLINED} name={NOTIFICATIONS} />
-        <Icon type={MATERIAL_ICONS_OUTLINED} name={ARTICLE} />
+        <Icon
+          className={SidebarStyles.icon}
+          type={MATERIAL_ICONS_OUTLINED}
+          name={NOTIFICATIONS}
+          text="notifications"
+          direction="row"
+        />
+        <Icon
+          className={SidebarStyles.icon}
+          type={MATERIAL_ICONS_OUTLINED}
+          name={ARTICLE}
+          text="resumes"
+          direction="row"
+        />
       </div>
-      <div>
-        <Icon type={MATERIAL_ICONS} name={SETTINGS} />
-        <Icon type={MATERIAL_ICONS} name={LOGOUT} />
-      </div>
+      <Icon
+        className={SidebarStyles.icon}
+        type={MATERIAL_ICONS}
+        name={SETTINGS}
+        text="settings"
+        direction="row"
+      />
+      <Icon
+        className={SidebarStyles.icon}
+        type={MATERIAL_ICONS}
+        name={LOGOUT}
+        text="logout"
+        direction="row"
+      />
     </div>
   );
 };
