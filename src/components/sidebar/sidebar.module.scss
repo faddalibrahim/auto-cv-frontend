@@ -16,19 +16,46 @@
 
   .icon {
     color: #444;
-    padding: 1rem;
+    padding: 1.5rem;
     width: 100%;
+
+    position: relative;
+  }
+
+  small {
+    position: absolute;
+    left: 110%;
+    pointer-events: none;
+    display: none;
+    padding: 0.5rem 1rem;
+    background-color: var(--app-theme);
+    color: white;
+    border-radius: 0.3rem;
+    animation: pop-out 0.1s ease-in-out forwards;
+  }
+
+  @keyframes pop-out {
+    from {
+      left: 50%;
+      opacity: 0;
+    }
+    to {
+      left: 110%;
+      opacity: 1;
+    }
   }
 
   i {
-    // margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .icon:hover {
     cursor: pointer;
     background-color: var(--app-theme);
     color: white;
+
+    small {
+      display: block;
+    }
   }
 }
