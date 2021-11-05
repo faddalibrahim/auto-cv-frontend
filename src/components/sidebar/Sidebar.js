@@ -20,46 +20,48 @@ const Sidebar = () => {
         className={SidebarStyles.icon}
         type={MATERIAL_ICONS}
         name={FACE}
-        text="profile"
+        // text="profile"
         direction="row"
       />
       <div>
         <Icon
           className={SidebarStyles.icon}
+          type={MATERIAL_ICONS_OUTLINED}
+          name={ARTICLE}
+          //   text="resumes"
+          direction="row"
+        />
+        <Icon
+          className={SidebarStyles.icon}
           type={MATERIAL_ICONS}
           name={ADD}
-          text="new"
+          //   text="new"
           direction="row"
         />
         <Icon
           className={SidebarStyles.icon}
           type={MATERIAL_ICONS_OUTLINED}
           name={NOTIFICATIONS}
-          text="notifications"
+          //   text="notifications"
+          direction="row"
+        />
+      </div>
+      <div>
+        <Icon
+          className={SidebarStyles.icon}
+          type={MATERIAL_ICONS}
+          name={SETTINGS}
+          //   text="settings"
           direction="row"
         />
         <Icon
           className={SidebarStyles.icon}
-          type={MATERIAL_ICONS_OUTLINED}
-          name={ARTICLE}
-          text="resumes"
+          type={MATERIAL_ICONS}
+          name={LOGOUT}
+          //   text="logout"
           direction="row"
         />
       </div>
-      <Icon
-        className={SidebarStyles.icon}
-        type={MATERIAL_ICONS}
-        name={SETTINGS}
-        text="settings"
-        direction="row"
-      />
-      <Icon
-        className={SidebarStyles.icon}
-        type={MATERIAL_ICONS}
-        name={LOGOUT}
-        text="logout"
-        direction="row"
-      />
     </div>
   );
 };

@@ -6,13 +6,22 @@
   display: flex;
   flex-flow: column;
   justify-content: space-between;
+  align-items: flex-start;
 
   justify-self: flex-start;
 
+  & > div {
+    align-items: flex-start;
+  }
+
   .icon {
-    padding: 1.5rem;
     color: #333;
-    flex-grow: 1;
+    padding: 1.5rem;
+  }
+
+  i {
+    margin-right: 0.5rem;
+    font-size: 1.8rem;
   }
 
   .icon:hover {

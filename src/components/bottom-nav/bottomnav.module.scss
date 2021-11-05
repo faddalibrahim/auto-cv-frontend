@@ -9,9 +9,14 @@
   grid-template-columns: repeat(5, 1fr);
 
   .icon {
-    padding: 0.7rem 0.5rem;
+    padding: 1rem 0.5rem;
     color: #333;
     flex-grow: 1;
+    user-select: none;
+  }
+
+  i {
+    margin-bottom: 0.4rem;
   }
 
   .icon:hover {

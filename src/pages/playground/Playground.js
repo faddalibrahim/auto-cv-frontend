@@ -4,8 +4,8 @@ import Sidebar from "components/sidebar/Sidebar";
 const Playground = () => {
   return (
     <>
-      {/* <Sidebar /> */}
-      <BottomNav />
+      <Sidebar />
+      {/* <BottomNav /> */}
     </>
   );
 };

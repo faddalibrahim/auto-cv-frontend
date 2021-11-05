@@ -7,11 +7,10 @@ const Icon = ({ name, type, className, text, direction }) => {
         flexFlow: direction,
         alignItems: "center",
         justifyContent: "center",
+        userSelect: "none",
       }}
     >
-      <i className={type} style={{ userSelect: "none", padding: "0.5rem" }}>
-        {name}
-      </i>
+      <i className={type}>{name}</i>
       <small>{text}</small>
     </div>
   );
