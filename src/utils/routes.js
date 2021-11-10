@@ -4,7 +4,7 @@ const LOGIN = "login",
   RESET_PASSWORD = "reset-password",
   VERIFY_EMAIL = "verify-email",
   HOME = "/home",
-  PLAYGROUND = "playground";
+  PLAYGROUND = "/playground";
 
 export {
   LOGIN,

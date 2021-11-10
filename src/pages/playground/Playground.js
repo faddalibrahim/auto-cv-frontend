@@ -1,10 +1,12 @@
-const { default: Skeleton } = require("components/skeleton/Skeleton");
+import BottomNav from "components/bottom-nav/BottomNav";
+import Sidebar from "components/sidebar/Sidebar";
 
 const Playground = () => {
   return (
-    <div>
-      <Skeleton />
-    </div>
+    <>
+      <Sidebar />
+      <BottomNav />
+    </>
   );
 };
 
