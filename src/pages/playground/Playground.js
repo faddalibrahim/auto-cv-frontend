@@ -5,7 +5,7 @@ const Playground = () => {
   return (
     <>
       <Sidebar />
-      {/* <BottomNav /> */}
+      <BottomNav />
     </>
   );
 };
