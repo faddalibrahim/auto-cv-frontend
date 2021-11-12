@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 //components
 import Button from "components/button/Button";
 import Input from "components/input/Input";
+import Loader from "components/loader/Loader";
 
 // utils
 import { REGISTER, FORGOT_PASSWORD } from "utils/routes";
@@ -76,6 +77,7 @@ const Login = () => {
         <NavLink to={REGISTER}>Register</NavLink>
       </div>
       {showLoader ? <div>loading...</div> : null}
+      <Loader />
     </div>
   );
 };
