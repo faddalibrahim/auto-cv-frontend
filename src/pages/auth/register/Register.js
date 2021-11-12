@@ -20,6 +20,7 @@ import {
 
 import { HOME, VERIFY_EMAIL } from "utils/routes";
 import { studentRegister } from "network/axios/apiHandlers";
+
 import Loader from "components/loader/Loader";
 
 const Register = (props) => {
