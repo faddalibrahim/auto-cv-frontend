@@ -19,6 +19,7 @@ import {
 } from "utils/FormConstants";
 
 import { HOME, VERIFY_EMAIL } from "utils/routes";
+import { studentRegister } from "network/axios/apiHandlers";
 
 const Register = (props) => {
   const [fields, setField] = useState({
@@ -29,10 +30,6 @@ const Register = (props) => {
     [REPEAT_PASSWORD]: "",
   });
 
-  const sendRegisterationDetails = (fields) => {
-    props.history.push(`${HOME}/${VERIFY_EMAIL}`);
-  };
-
   const handleRegisteration = (e) => {
     e.preventDefault();
     const { ok, message } = validateFields([fields, true, true]);
@@ -41,7 +38,22 @@ const Register = (props) => {
       return;
     }
 
-    sendRegisterationDetails(fields);
+    // send registeration details to backend
+    const {
+      "first name": firstname,
+      "last name": lastname,
+      email,
+      password,
+    } = fields;
+    const finalFields = { firstname, lastname, email, password };
+    
+    studentRegister(finalFields)
+      .then((response) => {
+        if (response.data.ok) {
+          props.history.push(`${HOME}/${VERIFY_EMAIL}`);
+        }
+      })
+      .catch((error) => alert("something went wrong. Please, try again later"));
   };
 
   const handleChange = (e) => {

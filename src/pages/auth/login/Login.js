@@ -10,6 +10,7 @@ import Input from "components/input/Input";
 import { REGISTER, FORGOT_PASSWORD } from "utils/routes";
 import { PASSWORD, EMAIL } from "utils/FormConstants";
 import validateFields from "utils/ValidateFields";
+import { studentLogin } from "network/axios/apiHandlers";
 
 const Login = () => {
   const [fields, setField] = useState({
@@ -24,7 +25,17 @@ const Login = () => {
       alert(message);
       return;
     }
-    console.log(fields);
+
+    studentLogin(fields)
+      .then((response) => {
+        console.log(response);
+        if (response.data.ok) {
+          if (!Number(response.data.data.isVerified)) {
+            alert("you are not verified yet");
+          }
+        }
+      })
+      .catch((error) => alert("something went wrong, Please try again later."));
   };
 
   const handleFieldChange = (e) => {
