@@ -5,13 +5,13 @@ import { NavLink } from "react-router-dom";
 //components
 import Button from "components/button/Button";
 import Input from "components/input/Input";
+import Loader from "components/loader/Loader";
 
 // utils
 import { REGISTER, FORGOT_PASSWORD } from "utils/routes";
 import { PASSWORD, EMAIL } from "utils/FormConstants";
 import validateFields from "utils/ValidateFields";
 import { studentLogin } from "network/axios/apiHandlers";
-import Loader from "components/loader/Loader";
 
 const Login = () => {
   const [fields, setField] = useState({
