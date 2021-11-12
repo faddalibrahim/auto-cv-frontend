@@ -1,20 +1,40 @@
+@use 'css/index';
+
 .homeContainer {
   display: flex;
   scroll-snap-type: x mandatory;
   overflow-x: scroll;
   overflow-y: hidden;
   height: 100vh;
+  width: 100vw;
 }
 
-/* welcome component */
-.welcome {
+%snap-styles {
   flex: 0 0 100vw;
   scroll-snap-align: start;
   overflow: hidden;
+}
+
+/* WELCOME COMPONENT (left side of /home) */
+.welcome {
+  @extend %snap-styles;
+
+  // positioning
   position: relative;
 
+  // layout
   display: grid;
   place-items: center;
+}
+
+.appName {
+  color: var(--app-theme);
+  font-size: 5vh;
+}
+
+.appDescription {
+  color: var(--dark);
+  font-size: 3vh;
 }
 
 .topRing {
@@ -29,25 +49,46 @@
   left: -30%;
 }
 
-/* auth component styles */
+/* AUTH ROUTES COMPONENT (right side of /home) */
 
 .authRoutesContainer {
-  flex: 0 0 100vw;
-  scroll-snap-align: start;
-  overflow-x: hidden;
+  @extend %snap-styles;
+
   box-shadow: -4px 0 10px 3px rgba(51, 51, 51, 0.03);
 
   display: grid;
   place-items: center;
-}
 
-/* this is th div of each of the routes loaded in the authRoutesContainer */
-.authRoutesContainer > div {
-  width: 80%;
+  /* parent div of each of the route components loaded in the container*/
+  & > div {
+    width: 80%;
+  }
+
+  /* Login , Register, Forgot Password headers */
+  h1 {
+    color: var(--h1-color);
+  }
+
+  a {
+    color: var(--app-theme);
+    margin: 0.5rem 0;
+    display: inline-block;
+  }
+
+  /* don't||already have an account?... container */
+  form + div {
+    margin: 1.5rem 0;
+    color: #aaa;
+  }
+
+  // enter your email address..
+  .directive {
+    color: #aaa;
+  }
 }
 
 /* Small (sm) devices (landscape phones, 567px and up) */
-@media screen and (min-width: 568px) {
+@media screen and (min-width: index.$sm-size) {
   .homeContainer {
     overflow-x: hidden;
   }
@@ -78,13 +119,13 @@
 }
 
 /* Medium (md) devices (tablets, 768px and up) */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: index.$md-size) {
 }
 
 /* Large (lg) devices (desktops, 992px and up) */
-@media screen and (min-width: 992px) {
+@media screen and (min-width: index.$lg-size) {
 }
 
 /* Extra (xl) devices (large desktops, 1200px and up) */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: index.$xl-size) {
 }
