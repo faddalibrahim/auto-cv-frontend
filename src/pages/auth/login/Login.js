@@ -76,8 +76,7 @@ const Login = () => {
         <span>don't have an account?</span>{" "}
         <NavLink to={REGISTER}>Register</NavLink>
       </div>
-      {showLoader ? <div>loading...</div> : null}
-      <Loading />
+      {showLoader ? <Loading /> : null}
     </div>
   );
 };
