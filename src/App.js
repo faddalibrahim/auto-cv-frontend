@@ -14,7 +14,6 @@ import AppStyles from "css/app.module.scss";
 // utils
 import { HOME, PLAYGROUND } from "utils/routes";
 
-
 class App extends Component {
   constructor(props) {
     super(props);
