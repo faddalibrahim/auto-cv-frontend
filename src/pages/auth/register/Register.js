@@ -20,6 +20,7 @@ import {
 
 import { HOME, VERIFY_EMAIL } from "utils/routes";
 import { studentRegister } from "network/axios/apiHandlers";
+import Loader from "components/loader/Loader";
 
 const Register = (props) => {
   const [fields, setField] = useState({
@@ -30,6 +31,8 @@ const Register = (props) => {
     [REPEAT_PASSWORD]: "",
   });
 
+  const [showLoader, setShowLoader] = useState(false);
+
   const handleRegisteration = (e) => {
     e.preventDefault();
     const { ok, message } = validateFields([fields, true, true]);
@@ -37,6 +40,8 @@ const Register = (props) => {
       alert(message);
       return;
     }
+
+    setShowLoader(true);
 
     // send registeration details to backend
     const {
@@ -46,14 +51,17 @@ const Register = (props) => {
       password,
     } = fields;
     const finalFields = { firstname, lastname, email, password };
-    
+
     studentRegister(finalFields)
       .then((response) => {
         if (response.data.ok) {
           props.history.push(`${HOME}/${VERIFY_EMAIL}`);
         }
       })
-      .catch((error) => alert("something went wrong. Please, try again later"));
+      .catch((error) => {
+        setShowLoader(false);
+        alert("something went wrong. Please, try again later");
+      });
   };
 
   const handleChange = (e) => {
@@ -103,6 +111,7 @@ const Register = (props) => {
           <NavLink to={`${LOGIN}`}>login</NavLink>
         </div>
       </div>
+      {showLoader ? <Loader /> : null}
     </div>
   );
 };
