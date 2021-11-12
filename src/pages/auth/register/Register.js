@@ -110,6 +110,7 @@ const Register = (props) => {
           <NavLink to={`${LOGIN}`}>login</NavLink>
         </div>
       </div>
+      {showLoader ? <div>loading...</div> : null}
     </div>
   );
 };
