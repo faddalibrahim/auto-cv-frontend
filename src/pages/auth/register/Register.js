@@ -5,6 +5,7 @@ import { useState } from "react";
 //components
 import Button from "components/button/Button";
 import Input from "components/input/Input";
+import Loader from "components/loader/Loader";
 
 // utils
 import { LOGIN } from "utils/routes";
@@ -20,8 +21,6 @@ import {
 
 import { HOME, VERIFY_EMAIL } from "utils/routes";
 import { studentRegister } from "network/axios/apiHandlers";
-
-import Loader from "components/loader/Loader";
 
 const Register = (props) => {
   const [fields, setField] = useState({
