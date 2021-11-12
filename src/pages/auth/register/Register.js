@@ -24,6 +24,8 @@ import { studentRegister } from "network/axios/apiHandlers";
 import Loader from "components/loader/Loader";
 
 const Register = (props) => {
+  const [showLoader, setShowLoader] = useState(false);
+
   const [fields, setField] = useState({
     [FIRST_NAME]: "",
     [LAST_NAME]: "",
@@ -31,8 +33,6 @@ const Register = (props) => {
     [PASSWORD]: "",
     [REPEAT_PASSWORD]: "",
   });
-
-  const [showLoader, setShowLoader] = useState(false);
 
   const handleRegisteration = (e) => {
     e.preventDefault();
