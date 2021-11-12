@@ -11,6 +11,7 @@ import Protected from "./components/protected/Protected";
 
 // utils
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -22,7 +23,11 @@ class App extends Component {
         <Router>
           <Switch>
             <Protected exact path="/" />
+<<<<<<< Updated upstream
             <Route path="/home" component={Home} />
+=======
+            <Route path={`${HOME}`} component={Home} />
+>>>>>>> Stashed changes
             <Route path="*" component={Error404} />
           </Switch>
         </Router>
