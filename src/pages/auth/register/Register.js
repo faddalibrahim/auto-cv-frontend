@@ -5,7 +5,6 @@ import { useState } from "react";
 //components
 import Button from "components/button/Button";
 import Input from "components/input/Input";
-import Loader from "components/loader/Loader";
 
 // utils
 import { LOGIN } from "utils/routes";
@@ -111,7 +110,6 @@ const Register = (props) => {
           <NavLink to={`${LOGIN}`}>login</NavLink>
         </div>
       </div>
-      {showLoader ? <Loader /> : null}
     </div>
   );
 };
