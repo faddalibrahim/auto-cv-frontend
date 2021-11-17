@@ -44,18 +44,24 @@ const Register = (props) => {
     setShowLoader(true);
 
     // send registeration details to backend
-    const {
-      "first name": firstname,
-      "last name": lastname,
-      email,
-      password,
-    } = fields;
-    const finalFields = { firstname, lastname, email, password };
+    const { "first name": fname, "last name": lname, email, password } = fields;
+    const finalFields = { fname, lname, email, password };
 
     studentRegister(finalFields)
       .then((response) => {
         if (response.data.ok) {
-          props.history.push(`${HOME}/${VERIFY_EMAIL}`);
+          // props.history.push(`${HOME}/${VERIFY_EMAIL}`);
+          props.history.push({
+            pathname: `${HOME}/${VERIFY_EMAIL}`,
+            state: {
+              name: `${fields[FIRST_NAME].toUpperCase()}  ${fields[
+                LAST_NAME
+              ].toUpperCase()}`,
+            },
+          });
+        } else {
+          alert(response.data.message);
+          setShowLoader(false);
         }
       })
       .catch((error) => {

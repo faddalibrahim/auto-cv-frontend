@@ -7,12 +7,13 @@ import Home from "./pages/home/Home";
 import Error404 from "./pages/errors/Error404/Error404";
 import Protected from "./components/protected/Protected";
 import Playground from "pages/playground/Playground";
+import Main from "pages/main/Main";
 
 // styles
 import AppStyles from "css/app.module.scss";
 
 // utils
-import { HOME, PLAYGROUND } from "utils/routes";
+import { HOME, PLAYGROUND, MAIN } from "utils/routes";
 
 class App extends Component {
   constructor(props) {

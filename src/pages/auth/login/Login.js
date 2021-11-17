@@ -12,8 +12,9 @@ import { PASSWORD, EMAIL } from "utils/FormConstants";
 import validateFields from "utils/ValidateFields";
 import { studentLogin } from "network/axios/apiHandlers";
 import Loading from "components/loading/Loading";
+import { MAIN } from "utils/routes";
 
-const Login = () => {
+const Login = (props) => {
   const [fields, setField] = useState({
     [EMAIL]: "",
     [PASSWORD]: "",
@@ -35,11 +36,15 @@ const Login = () => {
       .then((response) => {
         console.log(response);
         if (response.data.ok) {
+          localStorage.setItem("auto-cv-token", response.data.data.token);
+          // props.history.push({
+          //   pathname: "/",
+          //   state: {},
+          // });
+          window.location.replace("/");
+        } else {
+          alert(response.data.message);
           setShowLoader(false);
-          console.log(showLoader);
-          if (!Number(response.data.data.isVerified)) {
-            alert("you are not verified yet");
-          }
         }
       })
       .catch((error) => {

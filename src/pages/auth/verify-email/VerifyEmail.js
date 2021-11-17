@@ -6,7 +6,7 @@ import { AUTO_CV_TOKEN } from "utils/AppConstants";
 import ErrorBoundarySvg from "pages/errors/ErrorBoundary/ErrorBoundarySvg";
 import EmailVerificationProcess from "./EmailVerificationProcess";
 
-const VerifyEmail = ({ location, history }) => {
+const VerifyEmail = ({ location, history, state }) => {
   const queryString = location.search.slice(1);
 
   if (queryString.trim().length) {
@@ -25,6 +25,8 @@ const VerifyEmail = ({ location, history }) => {
   return (
     <div>
       <h1>Verify your email</h1>
+      <br />
+      <h3>Hi {location.state.name}</h3>
       <small className={HomeStyles.directive}>
         a confirmation link has been sent your email
       </small>
