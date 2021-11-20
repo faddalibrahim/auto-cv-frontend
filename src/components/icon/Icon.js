@@ -8,6 +8,7 @@ const Icon = ({ name, type, className, text, direction }) => {
         alignItems: "center",
         justifyContent: "center",
         userSelect: "none",
+        color: "#1CBB6F",
       }}
     >
       <i className={type}>{name}</i>

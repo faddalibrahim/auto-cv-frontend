@@ -11,11 +11,25 @@ class Main extends Component {
   render() {
     return (
       <div
-        style={{ width: "100vw", display: "flex", flexFlow: "column-reverse" }}
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          width: "100vw",
+          height: "100vh",
+        }}
       >
-        {/* <Sidebar /> */}
-        <BottomNav />
-        <div style={{ flexGrow: "1" }}>
+        <Sidebar />
+        <div
+          style={{
+            flexGrow: "1",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            height: "100vh",
+            paddingLeft: "5rem",
+            backgroundColor: "#fafafa",
+          }}
+        >
           <Create />
         </div>
       </div>

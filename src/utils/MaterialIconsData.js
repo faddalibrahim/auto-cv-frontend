@@ -8,6 +8,7 @@ export const ARTICLE = "article";
 export const LOGOUT = "logout";
 export const SETTINGS = "settings";
 export const FACE = "face";
+export const KEYBOARD_ARROW_DOWN = "keyboard_arrow_down";
 
 // text
 export const RESUME = "resume";
