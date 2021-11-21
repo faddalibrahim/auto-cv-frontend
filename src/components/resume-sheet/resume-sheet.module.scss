@@ -1,0 +1,32 @@
+$sm-size: 568px;
+$md-size: 768px;
+$lg-size: 992px;
+$xl-size: 1200px;
+
+/* Small (sm) devices (landscape phones, 567px and up) */
+@media screen and (min-width: $sm-size) {
+  :root {
+  }
+}
+
+/* Medium (md) devices (tablets, 768px and up) */
+@media screen and (min-width: $md-size) {
+  .sheet {
+    box-shadow: rgb(60 64 67 / 15%) 0px 1px 3px 1px;
+    width: 30vw;
+    height: 90vh;
+    background-color: #fff;
+  }
+}
+
+/* Large (lg) devices (desktops, 992px and up) */
+@media screen and (min-width: $lg-size) {
+  :root {
+  }
+}
+
+/* Extra (xl) devices (large desktops, 1200px and up) */
+@media screen and (min-width: $xl-size) {
+  :root {
+  }
+}

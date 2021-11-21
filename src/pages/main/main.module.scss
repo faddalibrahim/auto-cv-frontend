@@ -1,0 +1,28 @@
+$sm-size: 568px;
+$md-size: 768px;
+$lg-size: 992px;
+$xl-size: 1200px;
+
+/* Small (sm) devices (landscape phones, 567px and up) */
+@media screen and (min-width: $sm-size) {
+  :root {
+  }
+}
+
+/* Medium (md) devices (tablets, 768px and up) */
+@media screen and (min-width: $md-size) {
+  .main {
+  }
+}
+
+/* Large (lg) devices (desktops, 992px and up) */
+@media screen and (min-width: $lg-size) {
+  :root {
+  }
+}
+
+/* Extra (xl) devices (large desktops, 1200px and up) */
+@media screen and (min-width: $xl-size) {
+  :root {
+  }
+}

@@ -1,13 +1,11 @@
+import Skeleton from "components/skeleton/Skeleton";
+import ResumeSheetStyle from "./resume-sheet.module.scss";
+
 const ResumeSheet = () => {
   return (
-    <div
-      style={{
-        boxShadow: "rgb(60 64 67 / 15%) 0px 1px 3px 1px",
-        width: "30vw",
-        height: "90vh",
-        backgroundColor: "#fff",
-      }}
-    ></div>
+    <div className={ResumeSheetStyle.sheet}>
+      <Skeleton width="100%" height="100%" />
+    </div>
   );
 };
 

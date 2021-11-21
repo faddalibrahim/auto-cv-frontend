@@ -16,7 +16,7 @@
   }
 
   .icon {
-    color: #444;
+    color: #555;
     padding: 1.5rem;
     width: 100%;
 
@@ -25,6 +25,7 @@
 
   small {
     position: absolute;
+    z-index: 999;
     left: 110%;
     pointer-events: none;
     display: none;

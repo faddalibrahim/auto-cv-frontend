@@ -1,4 +1,4 @@
-const Icon = ({ name, type, className, text, direction }) => {
+const Icon = ({ name, type, className, text, direction, style }) => {
   return (
     <div
       className={className}
@@ -8,7 +8,7 @@ const Icon = ({ name, type, className, text, direction }) => {
         alignItems: "center",
         justifyContent: "center",
         userSelect: "none",
-        color: "#1CBB6F",
+        ...style,
       }}
     >
       <i className={type}>{name}</i>
