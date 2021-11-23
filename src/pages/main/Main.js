@@ -40,7 +40,7 @@ class Main extends Component {
             alignItems: "center",
             height: "100vh",
             paddingLeft: "5rem",
-            backgroundColor: "#fafafa",
+            backgroundColor: "#fdfdfd",
           }}
         >
           {mainPages[this.state.currentRoute]}

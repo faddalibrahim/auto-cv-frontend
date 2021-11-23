@@ -1,0 +1,36 @@
+/* width */
+
+.resumeSheetContainer {
+  //   position: relative;
+}
+
+.resumeFormContainer {
+  display: relative;
+  height: 100%;
+}
+
+.actions {
+  position: absolute;
+  left: 65%;
+  top: 2%;
+  z-index: 999;
+  display: flex;
+  flex-flow: column;
+
+  // this targets the div in the icon component;
+  div > div {
+    border-radius: 50%;
+    box-shadow: rgb(60 64 67 / 15%) 0px 1px 3px 1px;
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    vertical-align: middle;
+    margin-bottom: 5rem;
+    color: #333;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--app-theme);
+      color: white;
+    }
+  }
+}

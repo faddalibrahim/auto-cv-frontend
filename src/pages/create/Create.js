@@ -2,16 +2,41 @@ import Button from "components/button/Button";
 import ResumeForm from "components/resume-form/ResumeForm";
 import ResumeSheet from "components/resume-sheet/ResumeSheet";
 
+import Icon from "components/icon/Icon";
+
+import {
+  MATERIAL_ICONS_OUTLINED,
+  FILE_DOWNLOAD,
+  SHARE,
+  FULL_SCREEN,
+} from "utils/MaterialIconsData";
+
+import CreatePageStyles from "./create.module.scss";
+
 const Create = () => {
   return (
     <>
-      <ResumeSheet />
-      <div>
-        <div>save</div>
-        <div>download</div>
-        <div>preview</div>
+      <div
+        style={{ overflowY: "scroll", height: "100%" }}
+        className={CreatePageStyles.resumeSheetContainer}
+      >
+        <ResumeSheet />
       </div>
-      <ResumeForm />
+
+      <div className={CreatePageStyles.resumeSheetContainer}>
+        <ResumeForm />
+        <div className={CreatePageStyles.actions}>
+          <div>
+            <Icon type={MATERIAL_ICONS_OUTLINED} name={FILE_DOWNLOAD} />
+          </div>
+          <div>
+            <Icon type={MATERIAL_ICONS_OUTLINED} name={FULL_SCREEN} />
+          </div>
+          <div>
+            <Icon type={MATERIAL_ICONS_OUTLINED} name={SHARE} />
+          </div>
+        </div>
+      </div>
     </>
   );
 };
