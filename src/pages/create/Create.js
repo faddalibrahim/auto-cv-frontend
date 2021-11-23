@@ -6,6 +6,11 @@ const Create = () => {
   return (
     <>
       <ResumeSheet />
+      <div>
+        <div>save</div>
+        <div>download</div>
+        <div>preview</div>
+      </div>
       <ResumeForm />
     </>
   );
