@@ -16,27 +16,22 @@ import CreatePageStyles from "./create.module.scss";
 const Create = () => {
   return (
     <>
-      <div
-        style={{ overflowY: "scroll", height: "100%" }}
-        className={CreatePageStyles.resumeSheetContainer}
-      >
+      <div className={CreatePageStyles.resumeSheetContainer}>
         <ResumeSheet />
       </div>
-
-      <div className={CreatePageStyles.resumeSheetContainer}>
-        <ResumeForm />
-        <div className={CreatePageStyles.actions}>
-          <div>
-            <Icon type={MATERIAL_ICONS_OUTLINED} name={FILE_DOWNLOAD} />
-          </div>
-          <div>
-            <Icon type={MATERIAL_ICONS_OUTLINED} name={FULL_SCREEN} />
-          </div>
-          <div>
-            <Icon type={MATERIAL_ICONS_OUTLINED} name={SHARE} />
-          </div>
+      <div className={CreatePageStyles.actions}>
+        <div>
+          <Icon type={MATERIAL_ICONS_OUTLINED} name={FILE_DOWNLOAD} />
+        </div>
+        <div>
+          <Icon type={MATERIAL_ICONS_OUTLINED} name={FULL_SCREEN} />
+        </div>
+        <div>
+          <Icon type={MATERIAL_ICONS_OUTLINED} name={SHARE} />
         </div>
       </div>
+
+      <ResumeForm />
     </>
   );
 };
