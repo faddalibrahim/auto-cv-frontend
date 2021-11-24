@@ -13,7 +13,12 @@ import ResumeFormStyles from "./resume-form.module.scss";
 
 import headers from "./ResumeFormHeaders";
 
+// redux stuff
+import { useDispatch } from "react-redux";
+import { updatePersonalInfo } from "store/actions/Actions";
+
 const ResumeForm = () => {
+  const dispatch = useDispatch();
   return (
     <form autoComplete="off" className={ResumeFormStyles.form}>
       {headers.map((header, index) => (
@@ -25,7 +30,15 @@ const ResumeForm = () => {
           </header>
           <div style={{ padding: "0 1rem" }}>
             {header.fields.map((field) => (
-              <Input placeholder={field} />
+              <Input
+                placeholder={field}
+                id={field}
+                onChange={(e) =>
+                  dispatch(
+                    updatePersonalInfo({ [e.target.id]: e.target.value })
+                  )
+                }
+              />
             ))}
           </div>
         </section>

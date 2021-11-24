@@ -1,3 +1,5 @@
+import BulletedLineData from "components/bulleted-line-data/BulletedLineData";
+
 const {
   default: BoldOneLineData,
 } = require("components/one-line-data/BoldOneLineData");
@@ -14,10 +16,7 @@ const MultiLineData = ({ firm, location, duration, position, impacts }) => {
       <BoldOneLineData left={position} />
       <div>
         {impacts.map((impact, index) => (
-          <div style={{ display: "flex" }}>
-            <span style={{ marginRight: "0.2rem" }}>•</span>
-            <div>{impact}</div>
-          </div>
+          <BulletedLineData key={impact} data={impact} />
         ))}
       </div>
     </div>

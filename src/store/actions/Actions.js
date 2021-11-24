@@ -1,9 +1,10 @@
-import { INCREMENT, DECREMENT, SIGN_IN } from "./ActionTypes";
+import { store } from "store/store";
+import { PERSONAL_INFO, DECREMENT, SIGN_IN } from "./ActionTypes";
 
-export const incrementAction = (step = 1) => {
+export const updatePersonalInfo = (fieldValue) => {
   return {
-    type: INCREMENT,
-    payload: step,
+    type: PERSONAL_INFO,
+    payload: { ...store.getState().personalInfo, ...fieldValue },
   };
 };
 
