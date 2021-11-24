@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Icon from "components/icon/Icon";
 import Input from "components/input/Input";
 import {
@@ -13,7 +14,6 @@ import ResumeFormStyles from "./resume-form.module.scss";
 import headers from "./ResumeFormHeaders";
 
 const ResumeForm = () => {
-  console.log(headers);
   return (
     <form autoComplete="off" className={ResumeFormStyles.form}>
       {headers.map((header, index) => (
@@ -23,6 +23,11 @@ const ResumeForm = () => {
             <span>{header.title}</span>
             <Icon type={MATERIAL_ICONS_OUTLINED} name={KEYBOARD_ARROW_DOWN} />
           </header>
+          <div style={{ padding: "0 1rem" }}>
+            {header.fields.map((field) => (
+              <Input placeholder={field} />
+            ))}
+          </div>
         </section>
       ))}
     </form>
