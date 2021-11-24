@@ -2,26 +2,31 @@ import OneLineData from "components/one-line-data/OneLineData";
 import BoldOneLineData from "components/one-line-data/BoldOneLineData";
 import ResumeSheetStyle from "./resume-sheet.module.scss";
 import MultiLineData from "components/multi-line-data/MultiLineData";
+import ResumeCategory from "components/resume-category/ResumeCategory";
 
 const ResumeSheet = () => {
   return (
     <div className={ResumeSheetStyle.sheet}>
       <div className={ResumeSheetStyle.personalInfo}>
-        <div className="name" style={{ fontSize: "14pt", fontWeight: "bold" }}>
-          DAVID EBO SAMPAH
-        </div>
-        <article>PMB CT 3, Cantonments</article>
-        <article>
-          <span>0546987125 </span>/<span> Ghanaian</span>
-        </article>
-        <article>david.ebo@ashesi.edu.gh</article>
-        <article style={{ color: "dodgerblue" }}>https://linkedin.com</article>
+        <center>
+          <div
+            className="name"
+            style={{ fontSize: "14pt", fontWeight: "bold" }}
+          >
+            DAVID EBO SAMPAH
+          </div>
+          <article>PMB CT 3, Cantonments</article>
+          <article>
+            <span>0546987125 </span>/<span> Ghanaian</span>
+          </article>
+          <article>david.ebo@ashesi.edu.gh</article>
+          <article style={{ color: "dodgerblue" }}>
+            https://linkedin.com
+          </article>
+        </center>
       </div>
       <div className="education">
-        <h1>
-          EDUCATION
-          <hr />
-        </h1>
+        <ResumeCategory name="education" />
         <BoldOneLineData
           left="Ashesi University"
           right="Berekusu, Eastern Region"
@@ -42,10 +47,7 @@ const ResumeSheet = () => {
       </div>
       <br />
       <div className="achievements">
-        <h1>
-          ACHIEVEMENTS/AWARDS
-          <hr />
-        </h1>
+        <ResumeCategory name="achivements/awards" />
         <BoldOneLineData
           left="The MasterCard Foundation Scholar Program, Ashesi University"
           right="2012 - 2016"
@@ -54,10 +56,7 @@ const ResumeSheet = () => {
       </div>
       <br />
       <div className="work-experience">
-        <h1>
-          WORK EXPERIENCE
-          <hr />
-        </h1>
+        <ResumeCategory name="work experience" />
         <MultiLineData
           firm="ABC Children's Home"
           location="Cantonments, Accra"
@@ -84,10 +83,7 @@ const ResumeSheet = () => {
       </div>
       <br />
       <div className="projects-research">
-        <h1>
-          PROJECTS & RESEARCH
-          <hr />
-        </h1>
+        <ResumeCategory name="projects & research" />
         <MultiLineData
           firm="Green Hills Consortium"
           location="Sawaba, Kumasi"
@@ -102,10 +98,7 @@ const ResumeSheet = () => {
       </div>
       <br />
       <div className="co-curricular">
-        <h1>
-          CO-CURRICULAR ACTIVITIES
-          <hr />
-        </h1>
+        <ResumeCategory name="co-curricular activities" />
         <MultiLineData
           firm="Ashesi University"
           location="Ashesi Robotics Experience"
@@ -116,24 +109,10 @@ const ResumeSheet = () => {
             "Supervised and evaluated group projects and weekly tasks",
           ]}
         />
-        <br />
-        <MultiLineData
-          firm="Ashesi University"
-          location="Berekusu Math Community Project"
-          duration="January - December 2012"
-          position="Tutor"
-          impacts={[
-            "Tutored students in Berekuso to help them improve upon their math skills",
-            "Organised a weekly math quiz for the students and awarded the winning team with books and stationery",
-          ]}
-        />
       </div>
       <br />
       <div className="skills">
-        <h1>
-          SKILLS
-          <hr />
-        </h1>
+        <ResumeCategory name="skills" />
         <OneLineData left="• Advanced Proficiency in French" />
         <OneLineData left="• Programming Languages (Proficient in Java, C++, SQL, HTML, CSS, PHP, and JavaScript)" />
         <OneLineData left="• Graphic designing using software such as Indigo Studio, Balsamic, Pencil, Lumzy " />
