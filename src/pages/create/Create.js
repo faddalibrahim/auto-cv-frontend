@@ -19,6 +19,7 @@ const Create = () => {
       <div className={CreatePageStyles.resumeSheetContainer}>
         <ResumeSheet />
       </div>
+
       <div className={CreatePageStyles.actions}>
         <div>
           <Icon type={MATERIAL_ICONS_OUTLINED} name={FILE_DOWNLOAD} />
