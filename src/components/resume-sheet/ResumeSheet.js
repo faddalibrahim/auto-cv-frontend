@@ -4,7 +4,11 @@ import ResumeSheetStyle from "./resume-sheet.module.scss";
 import MultiLineData from "components/multi-line-data/MultiLineData";
 import ResumeCategory from "components/resume-category/ResumeCategory";
 
-const ResumeSheet = () => {
+const ResumeSheet = (props) => {
+  if (window.location.pathname === "/print") {
+    setTimeout(() => window.print(), 1000);
+  }
+
   return (
     <div className={ResumeSheetStyle.sheet}>
       <div className={ResumeSheetStyle.personalInfo}>

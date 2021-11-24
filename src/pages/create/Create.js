@@ -12,8 +12,9 @@ import {
 } from "utils/MaterialIconsData";
 
 import CreatePageStyles from "./create.module.scss";
+import { withRouter } from "react-router-dom";
 
-const Create = () => {
+const Create = (props) => {
   return (
     <>
       <div className={CreatePageStyles.resumeSheetContainer}>
@@ -21,7 +22,7 @@ const Create = () => {
       </div>
 
       <div className={CreatePageStyles.actions}>
-        <div>
+        <div onClick={() => props.history.push("/print")}>
           <Icon type={MATERIAL_ICONS_OUTLINED} name={FILE_DOWNLOAD} />
         </div>
         <div>
@@ -37,4 +38,4 @@ const Create = () => {
   );
 };
 
-export default Create;
+export default withRouter(Create);

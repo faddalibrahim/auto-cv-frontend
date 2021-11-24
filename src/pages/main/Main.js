@@ -18,7 +18,9 @@ class Main extends Component {
   setCurrentRoute = (routeName) => {
     this.setState({ currentRoute: routeName });
   };
+
   render() {
+    console.log(this.props.history);
     return (
       <div
         style={{
