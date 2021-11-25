@@ -1,5 +1,7 @@
+import UserProfile from "components/user-profile/UserProfile";
+
 const Profile = () => {
-  return <div>I am the fucking Profile Page</div>;
+  return <UserProfile />;
 };
 
 export default Profile;
