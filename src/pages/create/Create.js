@@ -18,15 +18,6 @@ import { withRouter } from "react-router-dom";
 const Create = (props) => {
   return (
     <>
-<<<<<<< HEAD
-      <ResumeSheet />
-
-      <Link to={`/to_pdf/ToPDF`} activeClassName="current">
-        <div>
-          DOWNLOAD
-        </div>
-      </Link>
-=======
       <div className={CreatePageStyles.resumeSheetContainer}>
         <ResumeSheet />
       </div>
@@ -43,7 +34,6 @@ const Create = (props) => {
         </div>
       </div>
 
->>>>>>> 7e89734bf0eac9cb500d8ccbf59d72951cdcade5
       <ResumeForm />
     </>
   );

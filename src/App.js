@@ -30,18 +30,14 @@ class App extends Component {
       <div className={AppStyles.app}>
         <Router>
           <Switch>
-            {/* <Protected exact path="/" />
+            <Protected exact path="/" />
             <Route path={`${HOME}`} component={Home} />
             <Route path={`${PLAYGROUND}`} component={Playground} />
-<<<<<<< HEAD
             <Route path={`/to_pdf/ToPDF`} component={ToPDF} />
-            <Route path="*" component={Error404} /> */}
             <Route path="/profile" component={UserProfile} />
             <Route path="/notification" component={Notifications}/>
-=======
             <Route path="/print" component={ResumeSheet} />
             <Route path="*" component={Error404} />
->>>>>>> 7e89734bf0eac9cb500d8ccbf59d72951cdcade5
           </Switch>
         </Router>
       </div>

@@ -9,13 +9,10 @@ export const LOGOUT = "logout";
 export const SETTINGS = "settings";
 export const FACE = "face";
 export const KEYBOARD_ARROW_DOWN = "keyboard_arrow_down";
-<<<<<<< HEAD
 export const KEYBOARD_ARROW_UP = "keyboard_arrow_up";
-=======
 export const FILE_DOWNLOAD = "file_download";
 export const SHARE = "share";
 export const FULL_SCREEN = "fullscreen";
->>>>>>> 7e89734bf0eac9cb500d8ccbf59d72951cdcade5
 
 // text
 export const RESUME = "resume";
