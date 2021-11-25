@@ -1,6 +1,13 @@
 import { useState } from "react";
 import Icon from "components/icon/Icon";
 import Input from "components/input/Input";
+import PersonalInformation from "components/personal-information/PersonalInformation";
+import Education from "components/education/Education";
+import Awards from "components/achievements/Awards";
+import Experience from "components/work_experience/Experience";
+import Projects from "components/projects/Projects";
+import Curricular from "components/curricular/Curricular";
+import Skills from "components/skills/Skills";
 import {
   CHECK_CIRCLE_OUTLINE,
   MATERIAL_ICONS,

@@ -1,0 +1,15 @@
+.all-notifications {
+    width: 100%;
+    height: auto;
+    margin: 3%;
+    padding: 4%;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+
+#header{
+    color: #e91916;
+    margin: 5px 0 10px 3px;
+    font-size: 2rem;
+    font-weight: bold;
+}
