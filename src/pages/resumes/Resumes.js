@@ -1,5 +1,5 @@
 const Resumes = () => {
-  return <div>I am the fucking Resumes Page</div>;
+  return <h1 style={{ color: "#aaa" }}>No RESUMES YET</h1>;
 };
 
 export default Resumes;
