@@ -50,15 +50,8 @@ const Register = (props) => {
     studentRegister(finalFields)
       .then((response) => {
         if (response.data.ok) {
-          // props.history.push(`${HOME}/${VERIFY_EMAIL}`);
-          props.history.push({
-            pathname: `${HOME}/${VERIFY_EMAIL}`,
-            state: {
-              name: `${fields[FIRST_NAME].toUpperCase()}  ${fields[
-                LAST_NAME
-              ].toUpperCase()}`,
-            },
-          });
+          alert("registeration successful");
+          props.history.push("/home/login");
         } else {
           alert(response.data.message);
           setShowLoader(false);

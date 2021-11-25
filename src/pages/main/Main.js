@@ -3,12 +3,24 @@ import Sidebar from "components/sidebar/Sidebar";
 import Create from "pages/create/Create";
 import { Component } from "react";
 
+// styles
+import MainStyles from "./main.module.scss";
+
+import mainPages from "./main-pages";
 class Main extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      currentRoute: "create",
+    };
   }
+
+  setCurrentRoute = (routeName) => {
+    this.setState({ currentRoute: routeName });
+  };
+
   render() {
+    console.log(this.props.history);
     return (
       <div
         style={{
@@ -18,7 +30,10 @@ class Main extends Component {
           height: "100vh",
         }}
       >
-        <Sidebar />
+        <Sidebar
+          setCurrentRoute={this.setCurrentRoute}
+          currentRoute={this.state.currentRoute}
+        />
         <div
           style={{
             flexGrow: "1",
@@ -27,10 +42,11 @@ class Main extends Component {
             alignItems: "center",
             height: "100vh",
             paddingLeft: "5rem",
-            backgroundColor: "#fafafa",
+            backgroundColor: "#fdfdfd",
           }}
         >
-          <Create />
+          {mainPages[this.state.currentRoute]}
+          {/* <Create /> */}
         </div>
       </div>
     );

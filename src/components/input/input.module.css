@@ -11,3 +11,7 @@
 .styles:focus {
   border: 0.1rem solid var(--app-theme);
 }
+
+.styles::placeholder {
+  color: #ccc;
+}

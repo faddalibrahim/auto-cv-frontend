@@ -1,0 +1,35 @@
+/* width */
+
+.resumeSheetContainer {
+  //   position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+  position: relative;
+  z-index: 999;
+  box-shadow: rgb(60 64 67 / 20%) 0px 1px 6px 1px;
+}
+
+.actions {
+  display: flex;
+  flex-flow: column;
+  align-self: start;
+  margin-top: 1rem;
+
+  // this targets the div in the icon component;
+  div > div {
+    border-radius: 50%;
+    box-shadow: rgb(60 64 67 / 15%) 0px 1px 3px 1px;
+    display: inline-block;
+    width: 3.5rem;
+    height: 3.5rem;
+    vertical-align: middle;
+    margin-bottom: 2rem;
+    color: #aaa;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--app-theme);
+      color: white;
+    }
+  }
+}
