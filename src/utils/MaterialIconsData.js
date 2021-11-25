@@ -9,6 +9,7 @@ export const LOGOUT = "logout";
 export const SETTINGS = "settings";
 export const FACE = "face";
 export const KEYBOARD_ARROW_DOWN = "keyboard_arrow_down";
+export const KEYBOARD_ARROW_UP = "keyboard_arrow_up";
 
 // text
 export const RESUME = "resume";

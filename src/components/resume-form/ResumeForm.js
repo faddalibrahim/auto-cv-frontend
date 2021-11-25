@@ -205,6 +205,7 @@ const ResumeForm = () => {
             gridTemplateColumns: "10% 80% 10%",
             alignItems: "center",
             justifyItems: "flex-start",
+            transitin:"0.3s ease-out"
           }}
           onClick = {toggleProjects}
         >
@@ -212,7 +213,7 @@ const ResumeForm = () => {
           <span>PROJECTS/RESEARCH</span>
           <Icon type={MATERIAL_ICONS_OUTLINED} name={KEYBOARD_ARROW_DOWN} />
         </header>
-        <article>
+        <article >
           <Projects height={fieldsVisibility.projects} width={"100px"} overflow={ fieldsVisibility.pro_overflow}/>
         </article>
       </section>
