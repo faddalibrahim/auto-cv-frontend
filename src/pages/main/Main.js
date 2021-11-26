@@ -16,6 +16,10 @@ class Main extends Component {
   }
 
   setCurrentRoute = (routeName) => {
+    if (routeName === "logout") {
+      localStorage.removeItem("auto-cv-token");
+      window.location.reload();
+    }
     this.setState({ currentRoute: routeName });
   };
 

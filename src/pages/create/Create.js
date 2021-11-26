@@ -1,7 +1,7 @@
 import Button from "components/button/Button";
 import ResumeForm from "components/resume-form/ResumeForm";
 import ResumeSheet from "components/resume-sheet/ResumeSheet";
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 
 import Icon from "components/icon/Icon";
 
