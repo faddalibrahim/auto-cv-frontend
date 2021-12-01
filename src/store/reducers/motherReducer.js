@@ -1,9 +1,22 @@
 import { combineReducers } from "redux";
-import { loggedReducer, counterReducer } from "./Reducers";
+import {
+  personalInfoReducer,
+  educationReducer,
+  achievementsAwardsReducer,
+  workExperienceReducer,
+  projectsResearchReducer,
+  coCurricularActivitiesReducer,
+  skillsReducer,
+} from "./Reducers";
 
 const motherReducer = combineReducers({
-  counter: counterReducer,
-  logged: loggedReducer,
+  personalInfo: personalInfoReducer,
+  education: educationReducer,
+  achievementsAwards: achievementsAwardsReducer,
+  workExperience: workExperienceReducer,
+  projectsResearch: projectsResearchReducer,
+  coCurricularActivities: coCurricularActivitiesReducer,
+  skills: skillsReducer,
 });
 
 export default motherReducer;

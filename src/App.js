@@ -4,12 +4,18 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // components
 import Home from "./pages/home/Home";
-import Error404 from "./pages/errors/Error404";
+import Error404 from "./pages/errors/Error404/Error404";
 import Protected from "./components/protected/Protected";
+import Playground from "pages/playground/Playground";
+
+import Main from "pages/main/Main";
 
 // styles
+import AppStyles from "css/app.module.scss";
 
 // utils
+import { HOME, PLAYGROUND, MAIN } from "utils/routes";
+import ResumeSheet from "components/resume-sheet/ResumeSheet";
 
 class App extends Component {
   constructor(props) {
@@ -18,11 +24,13 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App">
+      <div className={AppStyles.app}>
         <Router>
           <Switch>
             <Protected exact path="/" />
-            <Route path="/home" component={Home} />
+            <Route path={`${HOME}`} component={Home} />
+            <Route path={`${PLAYGROUND}`} component={Playground} />
+            <Route path="/print" component={ResumeSheet} />
             <Route path="*" component={Error404} />
           </Switch>
         </Router>
@@ -30,5 +38,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;

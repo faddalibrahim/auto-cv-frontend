@@ -1,22 +1,50 @@
 //libraries
-import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 //components
 import Button from "components/button/Button";
 import Input from "components/input/Input";
 
 // utils
-import { TEXT } from "utils/FormConstants";
+import { EMAIL } from "utils/FormConstants";
+import validateFields from "utils/ValidateFields";
+
+//styles
+import HomeStyles from "pages/home/Home.module.scss";
 
 const ForgotPassword = () => {
+  const [fields, setField] = useState({
+    [EMAIL]: "",
+  });
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { ok, message } = validateFields([fields]);
+    if (!ok) {
+      alert(message);
+      return;
+    }
+    console.log(fields);
+  };
+
+  const handleFieldChange = (e) => {
+    const updatedFieldKey = e.target.id;
+    const updatedField = { [updatedFieldKey]: e.target.value };
+    setField({ ...fields, ...updatedField });
+  };
+
   return (
     <div>
-      <h1 style={{ color: "#aaa" }}>Forgot Password</h1>
-      <small style={{ color: "#bbb" }}>
+      <h1>Forgot Password</h1>
+      <small className={HomeStyles.directive}>
         enter your email to receive a reset link
       </small>
-      <form action="">
-        <Input type={TEXT} placeholder="email" />
+      <form onSubmit={handleSubmit} autoComplete="off">
+        <Input
+          type={EMAIL}
+          placeholder={EMAIL}
+          onChange={handleFieldChange}
+          id={EMAIL}
+        />
         <Button>request reset link</Button>
       </form>
     </div>

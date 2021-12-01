@@ -1,14 +1,19 @@
-// import SideBar from "./SideBar";
-import Error404 from "pages/errors/Error404";
+// libraries
 import { Route, Redirect } from "react-router-dom";
+
+// components
+import Main from "pages/main/Main";
 
 const Protected = (props) => {
   let isAuth = false;
+  if (localStorage.getItem("auto-cv-token")) {
+    isAuth = true;
+  }
   return (
     <Route
       render={(props) =>
         isAuth ? (
-          <Error404 />
+          <Main />
         ) : (
           <Redirect
             to={{

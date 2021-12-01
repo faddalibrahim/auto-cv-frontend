@@ -1,4 +1,5 @@
 //libraries
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 //components
@@ -7,33 +8,80 @@ import Input from "components/input/Input";
 
 // utils
 import { REGISTER, FORGOT_PASSWORD } from "utils/routes";
-import { TEXT, PASSWORD } from "utils/FormConstants";
+import { PASSWORD, EMAIL } from "utils/FormConstants";
+import validateFields from "utils/ValidateFields";
+import { studentLogin } from "network/axios/apiHandlers";
+import Loading from "components/loading/Loading";
+import { MAIN } from "utils/routes";
 
-const Login = () => {
+const Login = (props) => {
+  const [fields, setField] = useState({
+    [EMAIL]: "",
+    [PASSWORD]: "",
+  });
+
+  const [showLoader, setShowLoader] = useState(false);
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const { ok, message } = validateFields([fields, true, false]);
+    if (!ok) {
+      alert(message);
+      return;
+    }
+
+    setShowLoader(true);
+
+    studentLogin(fields)
+      .then((response) => {
+        console.log(response);
+        if (response.data.ok) {
+          localStorage.setItem("auto-cv-token", response.data.data.token);
+          // props.history.push({
+          //   pathname: "/",
+          //   state: {},
+          // });
+          window.location.replace("/");
+        } else {
+          alert(response.data.message);
+          setShowLoader(false);
+        }
+      })
+      .catch((error) => {
+        setShowLoader(false);
+        alert("something went wrong, Please try again later.");
+      });
+  };
+
+  const handleFieldChange = (e) => {
+    const updatedFieldKey = e.target.id;
+    const updatedField = { [updatedFieldKey]: e.target.value };
+    setField({ ...fields, ...updatedField });
+  };
   return (
     <div>
-      <h1 style={{ color: "#aaa" }}>Login</h1>
-      <form action="">
-        <Input type={TEXT} placeholder="email" />
-        <Input type={PASSWORD} placeholder="password" />
-        <NavLink
-          to={FORGOT_PASSWORD}
-          style={{
-            color: "#ef5350",
-            margin: "0.5rem 0",
-            display: "inline-block",
-          }}
-        >
-          forgot password?
-        </NavLink>
+      <h1>Login</h1>
+      <form onSubmit={handleLogin} autoComplete="off">
+        <Input
+          type={EMAIL}
+          placeholder={EMAIL}
+          id={EMAIL}
+          onChange={handleFieldChange}
+        />
+        <Input
+          type={PASSWORD}
+          placeholder={PASSWORD}
+          id={PASSWORD}
+          onChange={handleFieldChange}
+        />
+        <NavLink to={FORGOT_PASSWORD}>forgot password?</NavLink>
         <Button>login</Button>
       </form>
-      <div style={{ margin: "2rem 0" }}>
-        <span style={{ color: "#aaa" }}>don't have an account?</span>{" "}
-        <NavLink to={REGISTER} style={{ color: "#ef5350" }}>
-          Register
-        </NavLink>
+      <div>
+        <span>don't have an account?</span>{" "}
+        <NavLink to={REGISTER}>Register</NavLink>
       </div>
+      {showLoader ? <Loading /> : null}
     </div>
   );
 };

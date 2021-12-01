@@ -1,6 +1,9 @@
+//components
 import ResumeIconSVG from "assets/ResumeIconSVG";
 import Ring from "components/ring/Ring";
-import HomeStyles from "./home.module.css";
+
+//styles
+import HomeStyles from "./Home.module.scss";
 
 const Welcome = () => {
   return (
@@ -10,8 +13,8 @@ const Welcome = () => {
       </div>
       <div>
         <div>
-          <p style={{ color: "#ef5350", fontSize: "5vh" }}>AutoCV</p>
-          <small style={{ color: "#aaa", fontSize: "3vh" }}>
+          <h1 className={HomeStyles.appName}>AutoCV</h1>
+          <small className={HomeStyles.appDescription}>
             ashesi resume generator
           </small>
         </div>

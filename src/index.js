@@ -7,13 +7,16 @@ import reportWebVitals from "./reportWebVitals";
 
 import { Provider } from "react-redux";
 import { store } from "store/store";
+import ErrorBoundary from "pages/errors/ErrorBoundary/ErrorBoundary";
 
 ReactDOM.render(
-  <Provider store={store}>
+  <ErrorBoundary>
     <React.StrictMode>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </React.StrictMode>
-  </Provider>,
+  </ErrorBoundary>,
   document.getElementById("root")
 );
 

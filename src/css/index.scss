@@ -8,12 +8,26 @@
   box-sizing: border-box;
 }
 
+$sm-size: 568px;
+$md-size: 768px;
+$lg-size: 992px;
+$xl-size: 1200px;
+
 :root {
   --app-theme: #ef5350;
   --app-theme-deep: #e91916;
+  --app-green: #1cbb6f;
   --input-border-color: #dadada;
   --sidebar-shadow: #ddd;
   --a4-shadow: #ddd;
+  --h1-color: #444;
+  --dark: #555;
+
+  // mobile sizes
+  --sm-size: 568px;
+  --md-size: 768px;
+  --lg-size: 992px;
+  --xl-size: 1200px;
 }
 
 body {
@@ -22,6 +36,28 @@ body {
     "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  // width: 4px;
+  // width: 2.5px;
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  // background: #f1f1f1;
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ddd;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
 }
 
 code {
@@ -40,25 +76,25 @@ a {
 }
 
 /* Small (sm) devices (landscape phones, 567px and up) */
-@media screen and (min-width: 568px) {
+@media screen and (min-width: $sm-size) {
   :root {
   }
 }
 
 /* Medium (md) devices (tablets, 768px and up) */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $md-size) {
   :root {
   }
 }
 
 /* Large (lg) devices (desktops, 992px and up) */
-@media screen and (min-width: 992px) {
+@media screen and (min-width: $lg-size) {
   :root {
   }
 }
 
 /* Extra (xl) devices (large desktops, 1200px and up) */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $xl-size) {
   :root {
   }
 }
