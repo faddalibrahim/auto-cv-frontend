@@ -1,3 +1,5 @@
 # auto-cv-frontend
 
-frontend of auto-cv resume generator
+Frontend of auto-cv resume generator
+
+![demo](auto-cv.gif)
