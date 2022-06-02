@@ -1,16 +1,16 @@
+import { useState } from "react";
+
 import Icon from "components/icon/Icon";
 import Input from "components/input/Input";
-import {
-  CHECK_CIRCLE_OUTLINE,
-  MATERIAL_ICONS,
-  MATERIAL_ICONS_OUTLINED,
-  KEYBOARD_ARROW_DOWN,
-} from "utils/MaterialIconsData";
+
+import CaretDownIcon from "components/caret-down-icon/CaretDownIcon";
+import CaretUpIcon from "components/caret-up-icon/CaretUpIcon";
+import CircleCheckIcon from "components/circle-check-icon/CircleCheckIcon";
 
 // styles
 import ResumeFormStyles from "./resume-form.module.scss";
 
-import headers from "./ResumeFormHeaders";
+import sections from "./ResumeFormSections";
 
 // redux stuff
 import { useDispatch } from "react-redux";
@@ -18,26 +18,42 @@ import { updatePersonalInfo } from "store/actions/Actions";
 
 const ResumeForm = () => {
   const dispatch = useDispatch();
+  const [size, setSize] = useState("contracted");
+  const reSize = (e, section) => {
+    if (size === "contracted") {
+      setSize("expanded");
+      e.target.closest("section").classList.add(".hey");
+      console.log(e.target.children);
+    } else {
+      setSize("contracted");
+      e.target.closest("section").classList.remove(".hey");
+      console.log(e.target.children);
+    }
+  };
+
   return (
     <form autoComplete="off" className={ResumeFormStyles.form}>
-      {headers.map((header, index) => (
-        <section key={index}>
-          <header>
-            <Icon type={MATERIAL_ICONS} name={CHECK_CIRCLE_OUTLINE} />
-            <span>{header.title}</span>
-            <Icon type={MATERIAL_ICONS_OUTLINED} name={KEYBOARD_ARROW_DOWN} />
+      {sections.map((section, index) => (
+        <section key={index} id={section.title}>
+          <header onClick={(e) => reSize(e, section.title)}>
+            <Icon customSVG={<CircleCheckIcon />} />
+            <span>{section.title}</span>
+            <Icon customSVG={<CaretDownIcon />} />
           </header>
-          <div style={{ padding: "0 1rem" }}>
-            {header.fields.map((field) => (
-              <Input
-                placeholder={field}
-                id={field}
-                onChange={(e) =>
-                  dispatch(
-                    updatePersonalInfo({ [e.target.id]: e.target.value })
-                  )
-                }
-              />
+          <div className={`${ResumeFormStyles[size]}`}>
+            {section.fields.map((field) => (
+              <>
+                <Input
+                  placeholder={field}
+                  id={field}
+                  onChange={(e) =>
+                    dispatch(
+                      updatePersonalInfo({ [e.target.id]: e.target.value })
+                    )
+                  }
+                />
+                <br />
+              </>
             ))}
           </div>
         </section>

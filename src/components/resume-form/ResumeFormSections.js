@@ -1,4 +1,4 @@
-const headers = [
+const sections = [
   {
     title: "PERSONAL INFORMATION",
     fields: [
@@ -85,4 +85,4 @@ const headers = [
   },
 ];
 
-export default headers;
+export default sections;

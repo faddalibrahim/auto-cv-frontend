@@ -1,8 +1,8 @@
-import BulletedLineData from "components/bulleted-line-data/BulletedLineData";
+import BulletedLineData from "components/resume-sheet-components/bulleted-line-data/BulletedLineData";
 
 const {
   default: BoldOneLineData,
-} = require("components/one-line-data/BoldOneLineData");
+} = require("components/resume-sheet-components/one-line-data/BoldOneLineData");
 
 const MultiLineData = ({ firm, location, duration, position, impacts }) => {
   return (

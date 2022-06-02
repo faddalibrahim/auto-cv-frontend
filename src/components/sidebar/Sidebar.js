@@ -7,18 +7,19 @@ const Sidebar = ({ setCurrentRoute, currentRoute }) => {
   return (
     <div className={SidebarStyles.sidebar}>
       {routes.map((route, index) => (
-        <div onClick={() => setCurrentRoute(route.text)} key={route.text}>
+        <div onClick={() => setCurrentRoute(route.label)} key={route.label}>
           <Icon
             className={SidebarStyles.icon}
             type={route.iconType}
             name={route.name}
-            text={route.text}
+            label={route.label}
             direction="column"
+            customSVG={route.customSVG}
             style={{
               backgroundColor: `${
-                currentRoute === route.text ? "#ef5350" : ""
+                currentRoute === route.label ? "#A76A99" : ""
               }`,
-              color: `${currentRoute === route.text ? "#fff" : ""}`,
+              color: `${currentRoute === route.label ? "#fff" : ""}`,
             }}
           />
         </div>

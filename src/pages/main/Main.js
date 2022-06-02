@@ -1,7 +1,5 @@
-import BottomNav from "components/bottom-nav/BottomNav";
-import Sidebar from "components/sidebar/Sidebar";
-import Create from "pages/create/Create";
 import { Component } from "react";
+import Sidebar from "components/sidebar/Sidebar";
 
 // styles
 import MainStyles from "./main.module.scss";
@@ -24,33 +22,14 @@ class Main extends Component {
   };
 
   render() {
-    console.log(this.props.history);
     return (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          width: "100vw",
-          height: "100vh",
-        }}
-      >
+      <div className={MainStyles.wrapper}>
         <Sidebar
           setCurrentRoute={this.setCurrentRoute}
           currentRoute={this.state.currentRoute}
         />
-        <div
-          style={{
-            flexGrow: "1",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            height: "100vh",
-            paddingLeft: "5rem",
-            backgroundColor: "#fdfdfd",
-          }}
-        >
+        <div className={MainStyles.mainPages}>
           {mainPages[this.state.currentRoute]}
-          {/* <Create /> */}
         </div>
       </div>
     );

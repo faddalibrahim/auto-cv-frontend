@@ -1,17 +1,29 @@
-.styles {
+.wrapper {
+  display: flex;
+  flex-flow: column-reverse;
+}
+
+.wrapper small {
+  color: #aaa;
+  transition: color 0.1s linear;
+}
+
+.wrapper label {
+  margin-bottom: 0.2rem;
+}
+
+.input {
   padding: 0.7rem 1rem;
   border: 0.09rem solid var(--input-border-color);
   font-family: "Google Sans";
   border-radius: 5px;
-  width: 100%;
-  margin: 0.7rem 0;
   transition: border 0.1s linear;
 }
 
-.styles:focus {
+.input:focus {
   border: 0.1rem solid var(--app-theme);
 }
 
-.styles::placeholder {
-  color: #ccc;
+.input:focus + label > small {
+  color: var(--app-theme);
 }

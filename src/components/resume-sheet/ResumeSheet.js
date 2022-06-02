@@ -1,11 +1,11 @@
-import OneLineData from "components/one-line-data/OneLineData";
-import BoldOneLineData from "components/one-line-data/BoldOneLineData";
+import OneLineData from "components/resume-sheet-components/one-line-data/OneLineData";
+import BoldOneLineData from "components/resume-sheet-components/one-line-data/BoldOneLineData";
 import ResumeSheetStyle from "./resume-sheet.module.scss";
-import MultiLineData from "components/multi-line-data/MultiLineData";
+import MultiLineData from "components/resume-sheet-components/multi-line-data/MultiLineData";
 import ResumeCategory from "components/resume-category/ResumeCategory";
 
 import { useSelector, useDispatch } from "react-redux";
-import BulletedLineData from "components/bulleted-line-data/BulletedLineData";
+import BulletedLineData from "components/resume-sheet-components/bulleted-line-data/BulletedLineData";
 
 const ResumeSheet = (props) => {
   if (window.location.pathname === "/print") {
@@ -233,4 +233,3 @@ const ResumeSheet = (props) => {
 };
 
 export default ResumeSheet;
-

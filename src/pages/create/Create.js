@@ -1,7 +1,5 @@
-import Button from "components/button/Button";
 import ResumeForm from "components/resume-form/ResumeForm";
 import ResumeSheet from "components/resume-sheet/ResumeSheet";
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 
 import Icon from "components/icon/Icon";
 
@@ -17,7 +15,7 @@ import { withRouter } from "react-router-dom";
 
 const Create = (props) => {
   return (
-    <>
+    <div className={CreatePageStyles.wrapper}>
       <div className={CreatePageStyles.resumeSheetContainer}>
         <ResumeSheet />
       </div>
@@ -35,7 +33,7 @@ const Create = (props) => {
       </div>
 
       <ResumeForm />
-    </>
+    </div>
   );
 };
 

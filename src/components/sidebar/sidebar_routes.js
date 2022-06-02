@@ -9,7 +9,14 @@ import {
   ADD,
 } from "utils/MaterialIconsData";
 
+import HomeIcon from "components/home-icon/HomeIcon";
+import BellIcon from "components/bell-icon/BellIcon";
+import FileIcon from "components/file-icon/FileIcon";
+import PlusIcon from "components/plus-icon/PlusIcon";
+import LogoutIcon from "components/logout-icon/LogoutIcon";
+
 const routeNames = {
+  RESUME_HOME: "home",
   PROFILE: "profile",
   RESUMES: "resumes",
   CREATE: "create",
@@ -22,32 +29,42 @@ const routes = [
   {
     name: FACE,
     iconType: MATERIAL_ICONS,
-    text: routeNames.PROFILE,
+    label: routeNames.PROFILE,
+    customSVG: null,
   },
   {
-    name: ARTICLE,
-    iconType: MATERIAL_ICONS_OUTLINED,
-    text: routeNames.RESUMES,
+    label: routeNames.RESUME_HOME,
+    customSVG: <HomeIcon />,
   },
   {
-    name: ADD,
-    iconType: MATERIAL_ICONS,
-    text: routeNames.CREATE,
+    // name: ARTICLE,
+    // iconType: MATERIAL_ICONS_OUTLINED,
+    label: routeNames.RESUMES,
+    customSVG: <FileIcon />,
   },
   {
-    name: NOTIFICATIONS,
-    iconType: MATERIAL_ICONS_OUTLINED,
-    text: routeNames.NOTIFICATIONS,
+    // name: ADD,
+    // iconType: MATERIAL_ICONS,
+    label: routeNames.CREATE,
+    customSVG: <PlusIcon />,
+  },
+  {
+    // name: NOTIFICATIONS,
+    // iconType: MATERIAL_ICONS_OUTLINED,
+    label: routeNames.NOTIFICATIONS,
+    customSVG: <BellIcon />,
   },
   {
     name: SETTINGS,
     iconType: MATERIAL_ICONS,
-    text: routeNames.SETTINGS,
+    label: routeNames.SETTINGS,
+    customSVG: null,
   },
   {
-    name: LOGOUT,
-    iconType: MATERIAL_ICONS,
-    text: routeNames.LOGOUT,
+    // name: LOGOUT,
+    // iconType: MATERIAL_ICONS,
+    label: routeNames.LOGOUT,
+    customSVG: <LogoutIcon />,
   },
 ];
 
