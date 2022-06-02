@@ -14,6 +14,7 @@ import BellIcon from "components/bell-icon/BellIcon";
 import FileIcon from "components/file-icon/FileIcon";
 import PlusIcon from "components/plus-icon/PlusIcon";
 import LogoutIcon from "components/logout-icon/LogoutIcon";
+import CogIcon from "components/cog-icon/CogIcon";
 
 const routeNames = {
   RESUME_HOME: "home",
@@ -55,10 +56,10 @@ const routes = [
     customSVG: <BellIcon />,
   },
   {
-    name: SETTINGS,
-    iconType: MATERIAL_ICONS,
+    // name: SETTINGS,
+    // iconType: MATERIAL_ICONS,
     label: routeNames.SETTINGS,
-    customSVG: null,
+    customSVG: <CogIcon />,
   },
   {
     // name: LOGOUT,
