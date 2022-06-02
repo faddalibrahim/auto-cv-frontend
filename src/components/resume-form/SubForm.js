@@ -16,7 +16,7 @@ import CircleCheckIcon from "components/circle-check-icon/CircleCheckIcon";
 const SubForm = ({ section }) => {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
-  const ss = {
+  const map = {
     true: "open",
     false: "close",
   };
@@ -26,15 +26,8 @@ const SubForm = ({ section }) => {
   };
 
   return (
-    <>
-      <header onClick={() => reSize(open)}>
-        <Icon customSVG={<CircleCheckIcon />} />
-        <span>{section.title}</span>
-        <Icon customSVG={open ? <CaretUpIcon /> : <CaretDownIcon />} />
-      </header>
-
-      {/* <div className={`${SubFormStyles[open]}`}> */}
-      <div className={SubFormStyles[ss[open]]}>
+    <div style={{ display: "flex", flexFlow: "column-reverse" }}>
+      <div className={SubFormStyles[map[open]]}>
         {section.fields.map((field) => (
           <>
             <Input
@@ -48,7 +41,12 @@ const SubForm = ({ section }) => {
           </>
         ))}
       </div>
-    </>
+      <header onClick={() => reSize(open)}>
+        <Icon customSVG={<CircleCheckIcon />} />
+        <span>{section.title}</span>
+        <Icon customSVG={open ? <CaretUpIcon /> : <CaretDownIcon />} />
+      </header>
+    </div>
   );
 };
 
