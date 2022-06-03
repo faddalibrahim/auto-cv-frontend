@@ -12,9 +12,9 @@ import {
 
 import CreatePageStyles from "./create.module.scss";
 import { withRouter } from "react-router-dom";
-import DownloadIcon from "components/download-icon/DownloadIcon";
-import FullscreenIcon from "components/fullscreen-icon/FullscreenIcon";
-import FileAddIcon from "components/file-add-icon/FileAddIcon";
+import DownloadIcon from "components/icons/download-icon/DownloadIcon";
+import FullscreenIcon from "components/icons/fullscreen-icon/FullscreenIcon";
+import FileAddIcon from "components/icons/file-add-icon/FileAddIcon";
 
 const Create = (props) => {
   return (

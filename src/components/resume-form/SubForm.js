@@ -9,9 +9,9 @@ import Icon from "components/icon/Icon";
 
 import Input from "components/input/Input";
 
-import CaretDownIcon from "components/caret-down-icon/CaretDownIcon";
-import CaretUpIcon from "components/caret-up-icon/CaretUpIcon";
-import CircleCheckIcon from "components/circle-check-icon/CircleCheckIcon";
+import CaretDownIcon from "components/icons/caret-down-icon/CaretDownIcon";
+import CaretUpIcon from "components/icons/caret-up-icon/CaretUpIcon";
+import CircleCheckIcon from "components/icons/circle-check-icon/CircleCheckIcon";
 
 const SubForm = ({ section }) => {
   const dispatch = useDispatch();

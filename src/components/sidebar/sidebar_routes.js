@@ -9,13 +9,13 @@ import {
   ADD,
 } from "utils/MaterialIconsData";
 
-import HomeIcon from "components/home-icon/HomeIcon";
-import BellIcon from "components/bell-icon/BellIcon";
-import FileIcon from "components/file-icon/FileIcon";
-import PlusIcon from "components/plus-icon/PlusIcon";
-import LogoutIcon from "components/logout-icon/LogoutIcon";
-import CogIcon from "components/cog-icon/CogIcon";
-import ProfileIcon from "components/profile-icon/ProfileIcon";
+import HomeIcon from "components/icons/home-icon/HomeIcon";
+import BellIcon from "components/icons/bell-icon/BellIcon";
+import FileIcon from "components/icons/file-icon/FileIcon";
+import PlusIcon from "components/icons/plus-icon/PlusIcon";
+import LogoutIcon from "components/icons/logout-icon/LogoutIcon";
+import CogIcon from "components/icons/cog-icon/CogIcon";
+import ProfileIcon from "components/icons/profile-icon/ProfileIcon";
 
 const routeNames = {
   RESUME_HOME: "home",
