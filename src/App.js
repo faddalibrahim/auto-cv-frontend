@@ -12,7 +12,7 @@ import Playground from "pages/playground/Playground";
 import AppStyles from "css/app.module.scss";
 
 // utils
-import { HOME, PLAYGROUND, MAIN } from "utils/routes";
+import { HOME, PLAYGROUND } from "utils/routes";
 import ResumeSheet from "components/resume-sheet/ResumeSheet";
 
 class App extends Component {
