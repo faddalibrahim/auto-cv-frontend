@@ -1,12 +1,9 @@
 import React from "react";
 import "./Notification.css";
 import Icon from "components/icon/Icon";
-import {
-  KEYBOARD_ARROW_DOWN,
-  KEYBOARD_ARROW_UP,
-  MATERIAL_ICONS_OUTLINED,
-  FACE,
-} from "utils/MaterialIconsData";
+
+import CaretDownIcon from "components/icons/caret-down-icon/CaretDownIcon";
+import CaretUpIcon from "components/icons/caret-up-icon/CaretUpIcon";
 
 const Notification = ({ time, sender, subject, body }) => {
   const [showBody, setBody] = React.useState(false);
@@ -20,9 +17,9 @@ const Notification = ({ time, sender, subject, body }) => {
       <div className="header">
         <small id="date">{time}</small>
         {showBody ? (
-          <Icon type={MATERIAL_ICONS_OUTLINED} name={KEYBOARD_ARROW_UP} />
+          <Icon customSVG={<CaretUpIcon />} />
         ) : (
-          <Icon type={MATERIAL_ICONS_OUTLINED} name={KEYBOARD_ARROW_DOWN} />
+          <Icon customSVG={<CaretDownIcon />} />
         )}
       </div>
       <div className="content">

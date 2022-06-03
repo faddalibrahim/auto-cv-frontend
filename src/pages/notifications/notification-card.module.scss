@@ -1,0 +1,25 @@
+.wrapper {
+  padding: 2rem;
+  border-bottom: 0.05rem solid #eee;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #fafafa;
+  }
+
+  // date
+  small {
+    color: var(--app-theme);
+  }
+
+  //   from
+  strong {
+  }
+
+  article {
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

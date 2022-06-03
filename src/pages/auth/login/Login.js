@@ -11,7 +11,6 @@ import { REGISTER, FORGOT_PASSWORD } from "utils/routes";
 import { PASSWORD, EMAIL } from "utils/FormConstants";
 import validateFields from "utils/ValidateFields";
 import { studentLogin } from "network/axios/apiHandlers";
-import Loading from "components/loading/Loading";
 import { MAIN } from "utils/routes";
 
 const Login = (props) => {
@@ -81,7 +80,7 @@ const Login = (props) => {
         <span>don't have an account?</span>{" "}
         <NavLink to={REGISTER}>Register</NavLink>
       </div>
-      {showLoader ? <Loading /> : null}
+      {showLoader ? "loading..." : null}
     </div>
   );
 };

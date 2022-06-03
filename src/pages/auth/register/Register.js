@@ -20,7 +20,6 @@ import {
 
 import { HOME, VERIFY_EMAIL } from "utils/routes";
 import { studentRegister } from "network/axios/apiHandlers";
-import Loading from "components/loading/Loading";
 
 const Register = (props) => {
   const [fields, setField] = useState({
@@ -110,7 +109,7 @@ const Register = (props) => {
           <NavLink to={`${LOGIN}`}>login</NavLink>
         </div>
       </div>
-      {showLoader ? <Loading /> : null}
+      {showLoader ? "loading.." : null}
     </div>
   );
 };
