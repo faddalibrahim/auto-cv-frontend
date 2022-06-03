@@ -19,6 +19,8 @@ import FileAddIcon from "components/icons/file-add-icon/FileAddIcon";
 const Create = (props) => {
   return (
     <div className={CreatePageStyles.wrapper}>
+      <ResumeForm />
+
       <div className={CreatePageStyles.resumeSheetContainer}>
         <ResumeSheet />
       </div>
@@ -35,7 +37,9 @@ const Create = (props) => {
         </div>
       </div>
 
-      <ResumeForm />
+      {/* <ResumeForm /> */}
+
+      {/* <ResumeForm /> */}
     </div>
   );
 };
