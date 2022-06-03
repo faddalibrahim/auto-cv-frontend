@@ -12,6 +12,9 @@ import {
 
 import CreatePageStyles from "./create.module.scss";
 import { withRouter } from "react-router-dom";
+import DownloadIcon from "components/download-icon/DownloadIcon";
+import FullscreenIcon from "components/fullscreen-icon/FullscreenIcon";
+import FileAddIcon from "components/file-add-icon/FileAddIcon";
 
 const Create = (props) => {
   return (
@@ -22,13 +25,13 @@ const Create = (props) => {
 
       <div className={CreatePageStyles.actions}>
         <div onClick={() => props.history.push("/print")}>
-          <Icon type={MATERIAL_ICONS_OUTLINED} name={FILE_DOWNLOAD} />
+          <Icon customSVG={<DownloadIcon />} />
         </div>
         <div>
-          <Icon type={MATERIAL_ICONS_OUTLINED} name={FULL_SCREEN} />
+          <Icon customSVG={<FullscreenIcon />} />
         </div>
         <div>
-          <Icon type={MATERIAL_ICONS_OUTLINED} name={SHARE} />
+          <Icon customSVG={<FileAddIcon />} />
         </div>
       </div>
 

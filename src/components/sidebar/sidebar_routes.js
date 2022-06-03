@@ -15,6 +15,7 @@ import FileIcon from "components/file-icon/FileIcon";
 import PlusIcon from "components/plus-icon/PlusIcon";
 import LogoutIcon from "components/logout-icon/LogoutIcon";
 import CogIcon from "components/cog-icon/CogIcon";
+import ProfileIcon from "components/profile-icon/ProfileIcon";
 
 const routeNames = {
   RESUME_HOME: "home",
@@ -28,10 +29,10 @@ const routeNames = {
 
 const routes = [
   {
-    name: FACE,
-    iconType: MATERIAL_ICONS,
+    // name: FACE,
+    // iconType: MATERIAL_ICONS,
     label: routeNames.PROFILE,
-    customSVG: null,
+    customSVG: <ProfileIcon />,
   },
   {
     label: routeNames.RESUME_HOME,
