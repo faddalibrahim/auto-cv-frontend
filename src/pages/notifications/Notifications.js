@@ -23,13 +23,21 @@ const Notifications = () => {
     <div className={NotificationsStyles.wrapper}>
       <div className={NotificationsStyles.notificationCards}>
         {inbox?.length ? (
-          inbox.map(({ id, date, subject, from, message }, index) => (
-            <div onClick={() => setNotificationIndex(index)}>
+          inbox.map(({ id, date, subject, from, message, isViewed }, index) => (
+            <div
+              onClick={() => setNotificationIndex(index)}
+              style={{
+                backgroundColor: `${
+                  notificationIndex === index ? "#fafafa" : "initial"
+                }`,
+              }}
+            >
               <NotificationCard
                 date={date}
                 subject={subject}
                 from={from}
                 message={message}
+                isViewed={isViewed}
               />
             </div>
           ))
