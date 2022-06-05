@@ -29,12 +29,16 @@ const Create = (props) => {
         <div>
           <Icon customSVG={<FullscreenIcon />} />
         </div>
-        <div onClick={() => setShowSaveResumeModal(!saveResumeModal)}>
+        <div onClick={() => setShowSaveResumeModal(true)}>
           <Icon customSVG={<FileAddIcon />} />
         </div>
       </div>
 
-      {saveResumeModal ? <SaveResumeModal /> : ""}
+      {saveResumeModal ? (
+        <SaveResumeModal setShowSaveResumeModal={setShowSaveResumeModal} />
+      ) : (
+        ""
+      )}
     </div>
   );
 };

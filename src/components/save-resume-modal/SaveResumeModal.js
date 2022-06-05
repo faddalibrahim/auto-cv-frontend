@@ -3,12 +3,12 @@ import Input from "components/input/Input";
 
 import SaveResumeModalStyles from "./saveresumemodal.module.scss";
 
-const SaveResumeModal = () => {
+const SaveResumeModal = ({ setShowSaveResumeModal }) => {
   return (
     <div className={SaveResumeModalStyles.wrapper}>
       <div className={SaveResumeModalStyles.subWrapper}>
         <Input type="text" label="resume name" />
-        <Button>save</Button>
+        <Button onClick={() => setShowSaveResumeModal(false)}>save</Button>
       </div>
     </div>
   );

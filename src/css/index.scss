@@ -14,9 +14,8 @@ $lg-size: 992px;
 $xl-size: 1200px;
 
 :root {
-  // --app-theme: #ef5350;
   --app-theme: #a76a99;
-  --app-theme-deep: #e91916;
+  --app-theme-deep: #ae81b3;
   --app-green: #1cbb6f;
   --input-border-color: #dadada;
   --sidebar-shadow: #ddd;
@@ -40,14 +39,11 @@ body {
 }
 
 ::-webkit-scrollbar {
-  // width: 4px;
-  // width: 2.5px;
   width: 2px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  // background: #f1f1f1;
   background: transparent;
 }
 
@@ -74,28 +70,4 @@ input {
 
 a {
   text-decoration: none;
-}
-
-/* Small (sm) devices (landscape phones, 567px and up) */
-@media screen and (min-width: $sm-size) {
-  :root {
-  }
-}
-
-/* Medium (md) devices (tablets, 768px and up) */
-@media screen and (min-width: $md-size) {
-  :root {
-  }
-}
-
-/* Large (lg) devices (desktops, 992px and up) */
-@media screen and (min-width: $lg-size) {
-  :root {
-  }
-}
-
-/* Extra (xl) devices (large desktops, 1200px and up) */
-@media screen and (min-width: $xl-size) {
-  :root {
-  }
 }
