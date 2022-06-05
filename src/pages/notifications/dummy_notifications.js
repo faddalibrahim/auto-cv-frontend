@@ -1,7 +1,7 @@
 const dummy_notifications = [
   {
     id: 1,
-    date: "21/05,2021",
+    date: "21/05/2021",
     subject: "Donec tristique",
     from: "Sed ut",
     message:
@@ -10,7 +10,7 @@ const dummy_notifications = [
   },
   {
     id: 2,
-    date: "21/05,2021",
+    date: "21/05/2021",
     subject: "Curabitur sodales",
     from: "Li Europan",
     message:
@@ -19,7 +19,7 @@ const dummy_notifications = [
   },
   {
     id: 3,
-    date: "21/05,2021",
+    date: "21/05/2021",
     subject: "Morbi rutrum",
     from: "Aliquam faucibus",
     message:
@@ -28,7 +28,7 @@ const dummy_notifications = [
   },
   {
     id: 4,
-    date: "21/05,2021",
+    date: "21/05/2021",
     subject: "Cras ullamcorper",
     from: "Etiam varius",
     message:
@@ -37,7 +37,7 @@ const dummy_notifications = [
   },
   {
     id: 5,
-    date: "21/05,2021",
+    date: "21/05/2021",
     subject: " Etiam a",
     from: "Curabitur sodales",
     message:
