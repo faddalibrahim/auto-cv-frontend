@@ -1,0 +1,19 @@
+.wrapper {
+  min-width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(13, 12, 14, 0.2);
+  display: flex;
+  justify-content: center;
+}
+
+.subWrapper {
+  width: 30%;
+  height: max-content;
+  background-color: white;
+  padding: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}

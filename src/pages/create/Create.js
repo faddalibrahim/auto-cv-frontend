@@ -2,21 +2,18 @@ import ResumeForm from "components/resume-form/ResumeForm";
 import ResumeSheet from "components/resume-sheet/ResumeSheet";
 
 import Icon from "components/icon/Icon";
-
-import {
-  MATERIAL_ICONS_OUTLINED,
-  FILE_DOWNLOAD,
-  SHARE,
-  FULL_SCREEN,
-} from "utils/MaterialIconsData";
-
 import CreatePageStyles from "./create.module.scss";
 import { withRouter } from "react-router-dom";
 import DownloadIcon from "components/icons/download-icon/DownloadIcon";
 import FullscreenIcon from "components/icons/fullscreen-icon/FullscreenIcon";
 import FileAddIcon from "components/icons/file-add-icon/FileAddIcon";
 
+import { useState } from "react";
+import SaveResumeModal from "components/save-resume-modal/SaveResumeModal";
+
 const Create = (props) => {
+  const [saveResumeModal, setShowSaveResumeModal] = useState(false);
+
   return (
     <div className={CreatePageStyles.wrapper}>
       <ResumeForm />
@@ -32,14 +29,12 @@ const Create = (props) => {
         <div>
           <Icon customSVG={<FullscreenIcon />} />
         </div>
-        <div>
+        <div onClick={() => setShowSaveResumeModal(!saveResumeModal)}>
           <Icon customSVG={<FileAddIcon />} />
         </div>
       </div>
 
-      {/* <ResumeForm /> */}
-
-      {/* <ResumeForm /> */}
+      {saveResumeModal ? <SaveResumeModal /> : ""}
     </div>
   );
 };

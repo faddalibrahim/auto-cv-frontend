@@ -1,6 +1,6 @@
 import InputStyles from "./input.module.css";
 
-const Input = ({ type, placeholder, onChange, id }) => {
+const Input = ({ type, label, placeholder, onChange, id }) => {
   return (
     <div className={InputStyles.wrapper}>
       <input
@@ -8,9 +8,11 @@ const Input = ({ type, placeholder, onChange, id }) => {
         className={InputStyles.input}
         id={id}
         onChange={onChange}
+        placeholder={placeholder}
+        label={label}
       />
       <label htmlFor={id}>
-        <small>{placeholder}</small>
+        <small>{label}</small>
       </label>
     </div>
   );

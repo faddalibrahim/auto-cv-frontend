@@ -31,7 +31,7 @@ const SubForm = ({ section }) => {
         {section.fields.map((field) => (
           <>
             <Input
-              placeholder={field}
+              label={field}
               id={field}
               onChange={(e) =>
                 dispatch(updatePersonalInfo({ [e.target.id]: e.target.value }))
