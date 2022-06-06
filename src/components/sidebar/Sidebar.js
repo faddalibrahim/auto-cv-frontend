@@ -1,6 +1,10 @@
+// components
 import Icon from "components/icon/Icon";
+
+// styles
 import SidebarStyles from "./sidebar.module.scss";
 
+// utils
 import pages from "./sidebar_pages";
 
 const Sidebar = ({ setCurrentPage, currentPage }) => {

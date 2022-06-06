@@ -1,10 +1,13 @@
+//libraries
 import { Component } from "react";
+
+// components
 import Sidebar from "components/sidebar/Sidebar";
 
 // styles
 import MainStyles from "./main.module.scss";
-
 import mainPages from "./main-pages";
+
 class Main extends Component {
   static CURRENT_PAGE = "create";
   static LOGOUT = "logout";
