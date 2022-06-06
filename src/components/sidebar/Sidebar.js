@@ -1,25 +1,26 @@
 import Icon from "components/icon/Icon";
 import SidebarStyles from "./sidebar.module.scss";
 
-import routes from "./sidebar_routes";
+import pages from "./sidebar_pages";
 
-const Sidebar = ({ setCurrentRoute, currentRoute }) => {
+const Sidebar = ({ setCurrentPage, currentPage }) => {
+  const APP_THEME = "#A76A99";
+  const WHITE = "#fff";
+
   return (
     <div className={SidebarStyles.sidebar}>
-      {routes.map((route, index) => (
-        <div onClick={() => setCurrentRoute(route.label)} key={route.label}>
+      {pages.map((page, index) => (
+        <div onClick={() => setCurrentPage(page.name)} key={page.name}>
           <Icon
             className={SidebarStyles.icon}
-            type={route.iconType}
-            name={route.name}
-            label={route.label}
+            type={page.iconType}
+            name={page.name}
+            label={page.name}
             direction="column"
-            customSVG={route.customSVG}
+            customSVG={page.customSVG}
             style={{
-              backgroundColor: `${
-                currentRoute === route.label ? "#A76A99" : ""
-              }`,
-              color: `${currentRoute === route.label ? "#fff" : ""}`,
+              backgroundColor: `${currentPage === page.name ? APP_THEME : ""}`,
+              color: `${currentPage === page.name ? WHITE : ""}`,
             }}
           />
         </div>

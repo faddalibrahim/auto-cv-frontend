@@ -1,14 +1,3 @@
-import {
-  FACE,
-  MATERIAL_ICONS,
-  MATERIAL_ICONS_OUTLINED,
-  ARTICLE,
-  NOTIFICATIONS,
-  SETTINGS,
-  LOGOUT,
-  ADD,
-} from "utils/MaterialIconsData";
-
 import HomeIcon from "components/icons/home-icon/HomeIcon";
 import BellIcon from "components/icons/bell-icon/BellIcon";
 import FileIcon from "components/icons/file-icon/FileIcon";
@@ -17,7 +6,7 @@ import LogoutIcon from "components/icons/logout-icon/LogoutIcon";
 import CogIcon from "components/icons/cog-icon/CogIcon";
 import ProfileIcon from "components/icons/profile-icon/ProfileIcon";
 
-const routeNames = {
+const pageNames = {
   RESUME_HOME: "home",
   PROFILE: "profile",
   RESUMES: "resumes",
@@ -27,47 +16,35 @@ const routeNames = {
   LOGOUT: "logout",
 };
 
-const routes = [
+const pages = [
   {
-    // name: FACE,
-    // iconType: MATERIAL_ICONS,
-    label: routeNames.PROFILE,
+    name: pageNames.PROFILE,
     customSVG: <ProfileIcon />,
   },
   {
-    label: routeNames.RESUME_HOME,
+    name: pageNames.RESUME_HOME,
     customSVG: <HomeIcon />,
   },
   {
-    // name: ARTICLE,
-    // iconType: MATERIAL_ICONS_OUTLINED,
-    label: routeNames.RESUMES,
+    name: pageNames.RESUMES,
     customSVG: <FileIcon />,
   },
   {
-    // name: ADD,
-    // iconType: MATERIAL_ICONS,
-    label: routeNames.CREATE,
+    name: pageNames.CREATE,
     customSVG: <PlusIcon />,
   },
   {
-    // name: NOTIFICATIONS,
-    // iconType: MATERIAL_ICONS_OUTLINED,
-    label: routeNames.NOTIFICATIONS,
+    name: pageNames.NOTIFICATIONS,
     customSVG: <BellIcon />,
   },
   {
-    // name: SETTINGS,
-    // iconType: MATERIAL_ICONS,
-    label: routeNames.SETTINGS,
+    name: pageNames.SETTINGS,
     customSVG: <CogIcon />,
   },
   {
-    // name: LOGOUT,
-    // iconType: MATERIAL_ICONS,
-    label: routeNames.LOGOUT,
+    name: pageNames.LOGOUT,
     customSVG: <LogoutIcon />,
   },
 ];
 
-export default routes;
+export default pages;
