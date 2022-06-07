@@ -1,33 +1,36 @@
-import SubFormStyles from "./sub-form.module.scss";
-
+// libraries
 import { useState } from "react";
 
+// styles
+import SubFormStyles from "./sub-form.module.scss";
+
+// redux
 import { useDispatch } from "react-redux";
 import { updatePersonalInfo } from "store/actions/Actions";
 
+// components
 import Icon from "components/icon/Icon";
-
 import Input from "components/input/Input";
-
-import CaretDownIcon from "components/icons/caret-down-icon/CaretDownIcon";
-import CaretUpIcon from "components/icons/caret-up-icon/CaretUpIcon";
-import CircleCheckIcon from "components/icons/circle-check-icon/CircleCheckIcon";
+import {
+  CaretDownIcon,
+  CaretUpIcon,
+  CircleCheckIcon,
+} from "components/icons/Icons.js";
 
 const SubForm = ({ section }) => {
   const dispatch = useDispatch();
-  const [open, setOpen] = useState(false);
-  const map = {
-    true: "open",
-    false: "close",
-  };
-
-  const reSize = (state) => {
-    setOpen(!state);
-  };
+  const [isOpen, toggleDropdown] = useState(false);
+  const OPEN = "open";
+  const CLOSE = "close";
 
   return (
-    <div style={{ display: "flex", flexFlow: "column-reverse" }}>
-      <div className={SubFormStyles[map[open]]}>
+    <div>
+      <header onClick={() => toggleDropdown(!isOpen)}>
+        <Icon customSVG={<CircleCheckIcon />} />
+        <span>{section.title}</span>
+        <Icon customSVG={isOpen ? <CaretUpIcon /> : <CaretDownIcon />} />
+      </header>
+      <div className={SubFormStyles[`${isOpen ? OPEN : CLOSE}`]}>
         {section.fields.map((field) => (
           <>
             <Input
@@ -41,11 +44,6 @@ const SubForm = ({ section }) => {
           </>
         ))}
       </div>
-      <header onClick={() => reSize(open)}>
-        <Icon customSVG={<CircleCheckIcon />} />
-        <span>{section.title}</span>
-        <Icon customSVG={open ? <CaretUpIcon /> : <CaretDownIcon />} />
-      </header>
     </div>
   );
 };
