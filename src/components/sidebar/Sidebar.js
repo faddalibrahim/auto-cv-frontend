@@ -10,6 +10,7 @@ import pages from "./sidebar_pages";
 const Sidebar = ({ setCurrentPage, currentPage }) => {
   const APP_THEME = "#A76A99";
   const WHITE = "#fff";
+  const DEFAULT_DIRECTION = "column";
 
   return (
     <div className={SidebarStyles.sidebar}>
@@ -19,8 +20,8 @@ const Sidebar = ({ setCurrentPage, currentPage }) => {
             className={SidebarStyles.icon}
             type={page.iconType}
             name={page.name}
-            label={page.name}
-            direction="column"
+            label={`${page.label ?? ""}`}
+            direction={DEFAULT_DIRECTION}
             customSVG={page.customSVG}
             style={{
               backgroundColor: `${currentPage === page.name ? APP_THEME : ""}`,

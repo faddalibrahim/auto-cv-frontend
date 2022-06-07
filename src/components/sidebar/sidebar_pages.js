@@ -38,6 +38,7 @@ const pages = [
   {
     name: pageNames.NOTIFICATIONS,
     customSVG: <BellIcon />,
+    label: 6,
   },
   {
     name: pageNames.SETTINGS,

@@ -34,7 +34,14 @@ const Icon = ({
       }}
     >
       {customSVG ? customSVG : <i className={type}>{name}</i>}
-      <small className="icon-text">{label}</small>
+      <small className="icon-text">{name}</small>
+      {label ? (
+        <article style={{ position: "absolute", top: "15%", right: "28%" }}>
+          {label}
+        </article>
+      ) : (
+        ""
+      )}
     </div>
   );
 };
