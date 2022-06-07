@@ -2,7 +2,7 @@ import OneLineData from "components/resume-sheet-components/one-line-data/OneLin
 import BoldOneLineData from "components/resume-sheet-components/one-line-data/BoldOneLineData";
 import ResumeSheetStyle from "./resume-sheet.module.scss";
 import MultiLineData from "components/resume-sheet-components/multi-line-data/MultiLineData";
-import ResumeCategory from "components/resume-category/ResumeCategory";
+import ResumeSection from "components/resume-sheet-components/resume-section/ResumeSection";
 
 import { useSelector, useDispatch } from "react-redux";
 import BulletedLineData from "components/resume-sheet-components/bulleted-line-data/BulletedLineData";
@@ -40,7 +40,7 @@ const ResumeSheet = (props) => {
         </center>
       </div>
       <div className="education">
-        <ResumeCategory name="education" />
+        <ResumeSection name="education" />
         <BoldOneLineData
           left={personalInfo["university"] ?? "Ashesi University"}
           right={personalInfo["location"] ?? "Berekusu Easten Region"}
@@ -71,7 +71,7 @@ const ResumeSheet = (props) => {
       </div>
       <br />
       <div className="achievements">
-        <ResumeCategory name="achivements/awards" />
+        <ResumeSection name="achivements/awards" />
         <BoldOneLineData
           left={
             personalInfo["achievement 1"] ??
@@ -91,7 +91,7 @@ const ResumeSheet = (props) => {
       </div>
       <br />
       <div className="work-experience">
-        <ResumeCategory name="work experience" />
+        <ResumeSection name="work experience" />
         <MultiLineData
           firm={personalInfo["work experience 1 firm"] ?? "ABC Children's Home"}
           location={
@@ -147,7 +147,7 @@ const ResumeSheet = (props) => {
       </div>
       <br />
       <div className="projects-research">
-        <ResumeCategory name="projects & research" />
+        <ResumeSection name="projects & research" />
         <MultiLineData
           firm={
             personalInfo["projects & research firm"] ?? "Green Hills Consortium"
@@ -181,7 +181,7 @@ const ResumeSheet = (props) => {
       </div>
       <br />
       <div className="co-curricular">
-        <ResumeCategory name="co-curricular activities" />
+        <ResumeSection name="co-curricular activities" />
         <MultiLineData
           firm={personalInfo["co-curricular firm"] ?? "Ashesi University"}
           location={
@@ -211,7 +211,7 @@ const ResumeSheet = (props) => {
       </div>
       <br />
       <div className="skills">
-        <ResumeCategory name="skills" />
+        <ResumeSection name="skills" />
         <BulletedLineData
           data={personalInfo["skill 1"] ?? "Advanced Proficiency in French"}
         />

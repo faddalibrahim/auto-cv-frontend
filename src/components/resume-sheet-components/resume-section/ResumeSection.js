@@ -1,4 +1,4 @@
-const ResumeCategory = ({ name }) => {
+const ResumeSection = ({ name }) => {
   return (
     <div>
       <div
@@ -14,4 +14,4 @@ const ResumeCategory = ({ name }) => {
   );
 };
 
-export default ResumeCategory;
+export default ResumeSection;

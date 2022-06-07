@@ -1,0 +1,11 @@
+.wrapper {
+  padding: 1rem;
+  width: 50%;
+}
+
+.docs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  color: #aaa;
+}
