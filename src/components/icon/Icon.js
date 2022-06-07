@@ -36,7 +36,21 @@ const Icon = ({
       {customSVG ? customSVG : <i className={type}>{name}</i>}
       <small className="icon-text">{name}</small>
       {label ? (
-        <article style={{ position: "absolute", top: "15%", right: "28%" }}>
+        <article
+          style={{
+            position: "absolute",
+            top: "18%",
+            right: "22%",
+            backgroundColor: "#a76a99",
+            borderRadius: "50%",
+            width: "1.1rem",
+            height: "1.1rem",
+            textAlign: "center",
+            lineHeight: "1.1rem",
+            color: "white",
+            fontSize: "0.8rem",
+          }}
+        >
           {label}
         </article>
       ) : (
